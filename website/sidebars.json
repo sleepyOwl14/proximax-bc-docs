@@ -1,0 +1,119 @@
+{
+  "docs": {
+    "Getting Started": [
+      "getting-started/what-is-proximax",
+      "getting-started/setting-up-workstation",
+      "getting-started/writing-first-application",
+      "getting-started/self-paced-training"
+    ],
+    "Protocol": [
+      "protocol/cryptography",
+      "protocol/block",
+      "protocol/transaction",
+      "protocol/harvesting",
+      "protocol/receipt",
+      "protocol/node"
+    ],
+    "Built-in Feautres": [
+      "built-in-features/account",
+      "built-in-features/account-filter",
+      "built-in-features/multisig-account",
+      "built-in-features/namespace",
+      "built-in-features/mosaic",
+      "built-in-features/transfer-transaction",
+      "built-in-features/aggregate-transaction",
+      "built-in-features/cross-chain-swaps"
+    ],
+    "REST API":[
+      "rest-api/rest-api-overview",
+      "rest-api/tools",
+      "rest-api/serialization",
+      "rest-api/websockets",
+      "rest-api/status-errors"
+    ],
+    "SDKs":[
+      "sdks/sdks-overview",
+      "sdks/architecture",
+      "sdks/languages",
+      "sdks/extending-nem-capabilities",
+      "sdks/sdk-development",
+      "sdks/sdk-documentation",
+      "sdks/migration"
+    ],
+    "Client":[
+      "client/client-overview",
+      "client/commands"
+    ],
+    "Prototyping Tool":[
+      "prototyping-tool/prototyping-overview",
+      "prototyping-tool/configuring-nodes",
+      "prototyping-tool/examples"
+    ],
+    "Support":[
+      "support/community",
+      "support/guidelines",
+      "support/contributors",
+      "support/suggesting-changes"
+    ],
+    "Wallets & Explorers": [
+      "wallets-explorers"
+    ]
+  },
+  "guides":{
+    "Account":[
+      "guides/account/account-overview",
+      "guides/account/create-open-account",
+      "guides/account/getting-account-information",
+      "guides/account/getting-xem-amount-sent-to-account",
+      "guides/account/reading-account-transactions"
+      ],
+    "Aggregate Transaction" : [
+        "guides/aggregate-transaction/aggreagte-transaction-overview",
+        "guides/aggregate-transaction/sending-payouts-with-aggregate-complete-transaction",
+        "guides/aggregate-transaction/creating-an-escrow-with-aggregate-bonded-transaction",
+        "guides/aggregate-transaction/asking-for-mosaics-with-aggregate-bonded-transaction",
+        "guides/aggregate-transaction/signing-announced-aggregate-bonded-transactions",
+        "guides/aggregate-transaction/signing-announced-aggregate-bonded-transactions-automatically",
+        "guides/aggregate-transaction/sending-a-multisig-transaction"
+      ],
+    "Block" : [
+        "guides/block/block-overview",
+        "guides/block/listening-new-blocks",
+        "guides/block/getting-block-by-height"
+      ],
+    "Cross Chain Swaps" : [
+        "guides/cross-chain-swaps/cross-chain-swaps-overview",
+        "guides/cross-chain-swaps/atomic-cross-chain-swap-between-NEM-public-and-private-chain"
+      ],
+    "Monitoring" : [
+        "guides/monitoring/monitoring-overview",
+        "guides/monitoring/turning-the-asynchronous-transaction-announcement-into-synchronous",
+        "guides/monitoring/monitoring-a-transaction-status"
+      ],
+    "Mosaic" : [
+        "guides/mosaic/mosaic-overview",
+        "guides/mosaic/creating-a-mosaic",
+        "guides/mosaic/modifying-mosaic-supply"
+      ],
+    "Multisig Account" : [
+        "guides/multisig-account/multisig-account-overview",
+        "guides/multisig-account/signing-announced-aggregate-bonded-transactions",
+        "guides/multisig-account/converting-an-account-to-multisig",
+        "guides/multisig-account/modifying-a-multisig-account",
+        "guides/multisig-account/creating-a-multi-level-multisig-account",
+        "guides/multisig-account/sending-a-multisig-transaction"
+      ],
+    "Namespace" : [
+        "guides/namespace/namespace-overview",
+        "guides/namespace/registering-a-namespace",
+        "guides/namespace/registering-a-subnamespace"
+      ],
+    "Tools" : [
+        "guides/tools/tools-overview"
+      ],
+    "Transfer Transaction" : [
+        "guides/transaction/transaction-overview",
+        "guides/transaction/sending-a-transfer-transaction"
+      ]  
+  }
+}

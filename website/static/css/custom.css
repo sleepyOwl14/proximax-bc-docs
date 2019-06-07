@@ -1,0 +1,147 @@
+/* your custom css */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+strong{
+    font-weight: bolder;
+}
+
+.caption{
+    text-align: center;
+    font-size : 120%;
+}
+
+.info{
+    padding: 0.5% 1%;
+    background-color: #F7F5FA; 
+}
+
+ol{
+    padding-left : 1em;
+}
+
+div.alpha-ol ol { 
+    list-style-type: lower-alpha; 
+}
+
+div.cap-alpha-ol ol { 
+    list-style-type: upper-alpha; 
+}
+
+.home.jumbotron {
+    padding-bottom: 220px;
+}
+
+.jumbotron{
+    padding-top: 0px !important;
+    color: #fff;
+    background: linear-gradient(to right, #58d4e3, #026061 100%);
+}
+
+.jumbotron .inner{
+    padding: 48px;
+}
+
+.jumbotron .inner .image-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.jumbotron .inner .image-container img {
+    height: 300px;
+    margin: 0 auto;
+}
+
+.jumbotron h1{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 68px;
+}
+
+.jumbotron p{
+    font-size: 23px;
+}
+
+.gap{
+    margin-bottom: 40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.briefDef{
+    padding-top: 60px;
+    font-size: 16px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card {
+    background: #fff;
+    width: 100%;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-container a {
+    color: #555;
+    font-size: 15px;
+}
+
+.card-container a:hover .card {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-img img {
+    margin: 40px;
+    height: 50px;
+}
+
+.socialInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 1em;
+    max-width: 1080px;
+}
+
+.nav-footer .socialInfo a:hover{
+    color: #fff;
+}
+
+.nav-footer .socialInfo a {
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+}
+
+.nav-footer .socialInfo li {
+    display: inline-block;
+    margin-right: 20px;
+}
