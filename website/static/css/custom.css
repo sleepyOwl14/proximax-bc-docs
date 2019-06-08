@@ -84,7 +84,7 @@ div.cap-alpha-ol ol {
     text-align: center;
 }
 
-.briefDef{
+.briefDef p{
     padding-top: 60px;
     font-size: 16px;
     padding-left: 20%;
@@ -144,4 +144,10 @@ div.cap-alpha-ol ol {
 .nav-footer .socialInfo li {
     display: inline-block;
     margin-right: 20px;
+}
+
+.acknowledgement{
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    padding-bottom: 10px;
 }
