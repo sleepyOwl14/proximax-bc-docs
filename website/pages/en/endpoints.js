@@ -20,20 +20,19 @@ function Endpoints(props) {
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
   return (
-    <div className="docMainWrapper wrapper">
-      <Container className="mainContainer documentContainer postContainer">
-        <div className="post">
-          <header className="postHeader">
-            <h2>Endpoints</h2>
-          </header>
-            <link href="../../css/api.css" rel="stylesheet"></link>
-            <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-alpha.41/bundles/redoc.standalone.js"></script>
+    <div className="separateOnPageNav">
+      <div className="docMainWrapper wrapper">
+        <Container className="mainContainer documentContainer postContainer">
+          <div className="post">
+              <link href="../../css/api.css" rel="stylesheet"></link>
+              <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-alpha.41/bundles/redoc.standalone.js"></script>
 
-            <div id="redoc"></div>
+              <div id="redoc"></div>
 
-            <script src="../../js/api.js"></script>
-        </div>
-      </Container>
+              <script src="../../js/api.js"></script>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 }

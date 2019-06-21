@@ -58,29 +58,28 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/logo-proximax.png',
+  headerIcon: 'img/logo-proximax-white.png',
   footerIcon: 'img/logo-proximax.png',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#2E8555',
-    secondaryColor: '#739766',
+    primaryColor: '#1fb4ac',
+    secondaryColor: '#f06623',
   },
 
   /* Custom fonts for website */
-  /*
+  
   fonts: {
     myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
       "-apple-system",
       "system-ui"
+    ],
+    myOtherFont: [
+      "Lato"
     ]
   },
-  */
+  
 
   docsSideNavCollapsible: true,
 

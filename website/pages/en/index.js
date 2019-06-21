@@ -24,11 +24,10 @@ class HomeSplash extends React.Component {
     return (
         <div className="home jumbotron text-center gap">
           <div className="inner">
-            <h1>{"ProximaX " + siteConfig.title}</h1>
-            <p>Start integrating ProximaX into your application.</p>
-            <div className="image-container">
-              <img src={`${baseUrl}img/nem-developers.png`} />
-            </div>
+            <h1>Start Using Developer-Friendly Blockchain Platform</h1>
+            <h6>ProximaX Sirius gives you direct access to a specialized set of <b>tested</b> and <b>secure on-blockchain features</b> using your favourite <b>programming language</b>.
+            </h6>
+            <p>ProximaX Sirius Version 0.16 &mdash; NEW UPDATE! <span>06.19.2019</span></p>
           </div>
         </div>
     );
@@ -52,6 +51,15 @@ class BriefDef extends React.Component{
   }
 }
 
+class ExtraScript extends React.Component{
+  render(){
+
+    return (
+      <script src="../../js/custom.js"></script>
+    );
+  }
+}
+
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = ''} = this.props;
@@ -69,7 +77,7 @@ class Index extends React.Component {
 
       const cards = cardProps.cardsData
         .map(cardInfo => (
-          <a className="blockElement alignCenter imageAlignTop twoByGridBlock" href={cardInfo.link} key={cardInfo.link} >
+          <a className="blockElement alignCenter imageAlignTop fourByGridBlock" href={cardInfo.link} key={cardInfo.link} >
               <div className="card">
                 <div className="blockImage">
                   <img src={cardInfo.image} />
@@ -110,39 +118,32 @@ class Index extends React.Component {
             link: `${baseUrl + docsUrl}/guides/account/account-overview`,
             title: 'Guides',
           },
+          {
+            content: 'Architecture your solution connecting the features that make up the Smart Asset System.',
+            image: `${baseUrl}img/home-built-in-features.png`,
+            imageAlign: 'top',
+            link: `${baseUrl + docsUrl}/built-in-features/account`,
+            title: 'Built-in Features',
+          },
+          {
+            content: 'From SDKs to extensions that make blockchain development easier.',
+            image: `${baseUrl}img/home-references.png`,
+            imageAlign: 'top',
+            link: `${baseUrl}references`,
+            title: 'References',
+          },
         ]}
-      </CardBlock_twoColumn>
-    );
-
-    const Cards_SecondRow = () => (
-      <CardBlock_twoColumn>
-      {[
-        {
-          content: 'Architecture your solution connecting the features that make up the Smart Asset System.',
-          image: `${baseUrl}img/home-built-in-features.png`,
-          imageAlign: 'top',
-          link: `${baseUrl + docsUrl}/built-in-features/account`,
-          title: 'Built-in Features',
-        },
-        {
-          content: 'From SDKs to extensions that make blockchain development easier.',
-          image: `${baseUrl}img/home-references.png`,
-          imageAlign: 'top',
-          link: `${baseUrl}references`,
-          title: 'References',
-        },
-      ]}
       </CardBlock_twoColumn>
     );
 
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
-        <BriefDef language={language} />
         <div className="mainContainer">
           <Cards_firstRow />
-          <Cards_SecondRow />
         </div>
+        <BriefDef language={language} />
+        <ExtraScript />
       </div>
     );
   }
