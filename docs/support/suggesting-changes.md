@@ -2,11 +2,11 @@
 id: suggesting-changes
 title: Suggesting documentation changes
 ---
-The ProximaX Developer Center is an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or writing new pieces of documentation which can be incorporated into the docs itself.
+The ProximaX Sirius-Chain Developer Center is an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing guides, improving the documentation, submitting errors and requests or writing new pieces of documentation which can be incorporated into the docs itself.
 
 ## Error reports
 
-If you think you have found an error in the ProximaX Developer Center, first make sure that you are testing against the latest version of ProximaX Developer Center - your issue may already have been fixed. If not, search our issues list on GitHub in case a similar [issue](https://github.com/proximax-storage/proximax-bc-docs/issues) has already been opened.
+If you think you have found an error in the ProximaX Sirius-Chain Developer Center, first make sure that you are testing against the latest version of ProximaX Sirius-Chain Developer Center - your issue may already have been fixed. If not, search our issues list on GitHub in case a similar [issue](https://github.com/proximax-storage/proximax-bc-docs/issues) has already been opened.
 
 It is very helpful if you can prepare a reproduction of the error. It makes it easier to find the problem and to fix it.
 
@@ -23,13 +23,13 @@ Open a new [issue](https://github.com/proximax-storage/proximax-bc-docs/issues) 
 
 ## Requests
 
-If you find yourself wishing for content that does not exist in the ProximaX Developer Center, you are probably not alone. Most of the documentation and guides that the ProximaX Developer Center has today have been added because our users saw the need. Open an [issue](https://github.com/proximax-storage/proximax-bc-docs/issues) on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
+If you find yourself wishing for content that does not exist in the ProximaX Sirius-Chain Developer Center, you are probably not alone. Most of the documentation and guides that the ProximaX Sirius-Chain Developer Center as today have been added because our users saw the need. Open an [issue](https://github.com/proximax-storage/proximax-bc-docs/issues) on our issues list on GitHub which describes the missing documentation or improvement you would like to see.
 
 If the improvement is not related to documentation, but with a specific project, please check CONTRIBUTING.md in the project repository.
 
 ## Contributing code and documentation changes
 
-To expand and improve the ProximaX Developer Center, please find or open an [issue](https://github.com/proximax-storage/proximax-bc-docs/issues) about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there are particular issues that you should know about before implementing the change.
+To expand and improve the ProximaX Sirius-Chain Developer Center, please find or open an [issue](https://github.com/proximax-storage/proximax-bc-docs/issues) about it first. Talk about what you would like to do. It may be that somebody is already working on it, or that there are particular issues that you should know about before implementing the change.
 
 We enjoy working with contributors to get their pull-requests accepted.
 

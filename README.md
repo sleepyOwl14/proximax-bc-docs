@@ -28,7 +28,7 @@ A browser window will open up, the index (home) page will open.
 
 ## Documentation and Getting Started
 
-Get started and learn about ProximaX Blockchain in this [official documentation]().
+Get started and learn about ProximaX Sirius-Chain in this [official documentation]().
 
 ## Contributing
 

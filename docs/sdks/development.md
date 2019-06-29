@@ -2,18 +2,18 @@
 id: sdk-development
 title: SDK Development
 ---
-A key objective is that interoperability becomes a natural design of the XPX-SDK. Follow this guideline to collaborate creating a NEM SDK, achieving the best quality with the less effort.
+A key objective is that interoperability becomes a natural design of the XPX-Chain-SDK. Follow this guideline to collaborate creating a XPX-Chain-SDK, achieving the best quality with the less effort.
 
-## Learning about Catapult
+## Learning about Sirius-Chain (Sirius-Chain)
 
-In case you haven’t used XPX-SDK or ProximaX Sirius Chain in general, we encourage you to:
+In case you haven’t used XPX-Chain-SDK or Sirius-Chain in general, we encourage you to:
 
-1. Review the technical documentation to become familiar with the [ProximaX built-in features](../built-in-features/account.md).
-2. Setup the [Sirius Chain in local environment via docker](https://github.com/tech-bureau/catapult-service-bootstrap) or enroll the [beta program](https://mijin.io/en/product/#mijin2) to access a Catapult Test Net without the need to run it yourself.
+1. Review the technical documentation to become familiar with the [Sirius-Chain built-in features](../built-in-features/account.md).
+2. Setup the [Sirius-Chain in local environment via docker](#) or enroll the [beta program](#) to access a Sirius-Chain Test Net without the need to run it yourself.
 3. [Check the API reference](../rest-api/overview.md#requests) and play with the API endpoints.
-4. Become familiar with the current [xpx-sdk via code examples](../built-in-features/account.md) & [xpx-cli](../client/overview.md) .
+4. Become familiar with the current [xpx-chain-sdk via code examples](../built-in-features/account.md) & [xpx-cli](../client/overview.md) .
 
-[//]: # (5. [Join](https://join.slack.com/t/nem2/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM) our Slack to ask ProximaX Sirius Chain related questions.)
+[//]: # (5. [Join](https://join.slack.com/t/xpx-chain/shared_invite/enQtMzY4MDc2NTg0ODgyLTFhZjgxM2NhYTQ1MTY1Mjk0ZDE2ZTJlYzUxYWYxYmJlYjAyY2EwNGM5NzgxMjM4MGEzMDc5ZDIwYTgzZjgyODM) our Slack to ask ProximaX Sirius-Chain related questions.)
 
 ## Development
 
@@ -161,7 +161,7 @@ SDKs need to be adopted by other developers. As a contributor, no one knows bett
 
 When you open-source your code, [submit the repository to this page](./languages.md).
 
-To become an accepted SDK, it should be proposed as a [NIP](https://github.com/proximax-storage/NIP/blob/master/NIPs/nip-0001.md). The reason behind the XPX Improvement Proposal is to ensure that the new libraries are reviewed, tested and shared among ProximaX Chain developers.)
+To become an accepted SDK, it should be proposed as a [NIP](https://github.com/proximax-storage/NIP/blob/master/NIPs/nip-0001.md). The reason behind the XPX Improvement Proposal is to ensure that the new libraries are reviewed, tested and shared among Sirius-Chain developers.)
 
 ## Future work
 

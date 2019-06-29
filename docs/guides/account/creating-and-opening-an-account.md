@@ -8,11 +8,11 @@ Create a new [account](../../built-in-features/account.md) and open it.
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - Text editor or IDE
-- XPX-SDK or xpx2-CLI
+- XPX-Chain-SDK or xpx2-CLI
 
 ## Let’s get into some code
 
-An account is a key pair (private and public key) associated to a mutable state stored in the ProximaX blockchain.
+An account is a key pair (private and public key) associated to a mutable state stored in the Sirius-Chain.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypesSript-->
@@ -37,7 +37,7 @@ xpx2-cli account generate --network MIJIN_TEST
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-The **private key** uniquely identifies a ProximaX Sirius Chain account and holds all of its power. It is a priority to make sure it is stored safely somewhere **offline** and not to share it with anyone.
+The **private key** uniquely identifies a Sirius-Chain account and holds all of its power. It is a priority to make sure it is stored safely somewhere **offline** and not to share it with anyone.
 
 The **public key** is cryptographically derived from the private key and safe to be shared. In spite of that, it is preferable to share the **address**, which contains further information such as network and validity check.
 

@@ -14,7 +14,7 @@ It is possible to create multiple subnamespaces with the same name in different 
 Prerequisites
 
 - Finish [registering a namespace guide](../namespace/registering-a-namespace.md)
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 - A text editor or IDE
 - An account with XPX and at least one namespace
 
@@ -100,7 +100,7 @@ transactionHttp
 
 <!--Bash-->
 ```bash
-nem2-cli transaction namespace --subnamespace --parentname foo --name bar
+xpx-cli transaction namespace --subnamespace --parentname foo --name bar
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

@@ -8,7 +8,7 @@ Transfer [mosaics](../../built-in-features/mosaic.md) and messages between two a
 ## Prerequisites
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 - A text editor or IDE
 - An account with XPX
 
@@ -27,24 +27,24 @@ Once an account announces a transaction, the server will always return an OK res
 To understand the transaction lifecycle, we recommend you to open three new terminals. The first terminal monitors announced transactions validation errors.
 
 ```
-$> nem2-cli monitor status
+$> xpx-cli monitor status
 ```
 
 Monitoring `unconfirmed` shows you which transactions have reached the network, but not are not included in a block yet.
 
 ```
-$> nem2-cli monitor unconfirmed
+$> xpx-cli monitor unconfirmed
 ```
 
 Once a transaction is included, you will see it under the `confirmed` terminal.
 
 ```
-$> nem2-cli monitor confirmed
+$> xpx-cli monitor confirmed
 ```
 
 ## Let’s get into some code
 
-Alice wants sends 10 XPX to Bob. She wants to include a message, for example Welcome to NEM.
+Alice wants sends 10 XPX to Bob. She wants to include a message, for example Welcome to Sirius-Chain.
 
 1. Create the transfer transaction, by including Bob address as the recipient, adding 10 XPX and the message requested.
 
@@ -57,7 +57,7 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('Welcome To NEM'),
+    PlainMessage.create('Welcome To Sirius-Chain'),
     NetworkType.MIJIN_TEST);
 ```
 
@@ -69,7 +69,7 @@ const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
     [NetworkCurrencyMosaic.createRelative(10)],
-    PlainMessage.create('Welcome To NEM'),
+    PlainMessage.create('Welcome To Sirius-Chain'),
     NetworkType.MIJIN_TEST);
 ```
 
@@ -81,7 +81,7 @@ const transferTransaction = TransferTransaction.create(
         Deadline.create(2, HOURS),
         Address.createFromRawAddress(recipientAddress),
         Collections.singletonList(NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10))),
-        PlainMessage.create("Welcome To NEM"),
+        PlainMessage.create("Welcome To Sirius-Chain"),
         NetworkType.MIJIN_TEST
     );
 ```
@@ -153,7 +153,7 @@ transactionHttp
 
 <!--Bash-->
 ```bash
-nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics prx:xpx::10000000 --message "Welcome to NEM"
+xpx-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics prx:xpx::10000000 --message "Welcome to Sirius-Chain"
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -202,7 +202,7 @@ If you own more than one mosaic, send them together in the same transaction:
 
 <!--Bash-->
 ```bash
-nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics alice:token::10,prx:xpx::10000000 --message "sending multiple mosaics"
+xpx-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics alice:token::10,prx:xpx::10000000 --message "sending multiple mosaics"
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

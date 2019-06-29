@@ -2,17 +2,17 @@
 id: node
 title: Node
 ---
-The NEM blockchain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
+The Sirius-Chain platform is built from a network of nodes. These nodes provide a powerful, stable, and secure platform where Smart Assets transactions are conducted, searched, and immutably logged to the blockchain ledger.
 
 ![Four Layer Architecture](/img/four-layer-architecture.png "Four Layer Architecture")
 
-<p class="caption">Catapult’s Performance Advantage: A Four-Layered Architecture</p>
+<p class="caption">Sirius-Chain’s Performance Advantage: A Four-Layered Architecture</p>
 
 The four-layered architecture allows developers to update any of these tiers without disrupting the others, which improves security.
 
 ## P2P Component
 
-**Repository**: [Catapult Server](https://github.com/proximax-storage/catapult-server)
+**Repository**: [Sirius-Chain Server](https://github.com/proximax-storage/catapult-server)
 
 The P2P nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to [verify transactions](./transaction.md#announcing-a-transaction) and [blocks](./block.md), run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
@@ -49,7 +49,7 @@ Persisting the state is convenient in networks with a large number of accounts.
 
 ## API Component
 
-**Repository**: [Catapult REST](https://github.com/proximax-storage/catapult-rest)
+**Repository**: [Sirius-Chain REST](https://github.com/proximax-storage/catapult-rest)
 
 The primary responsibility of the API is to store the data in a readable form. Each API instance maintains a MongoDB, and optionally a RocksDB to save the state.
 
@@ -78,12 +78,12 @@ MongoDB should not be accessed externally.
 
 ## ZMQ
 
-[ZeroMQ](https://en.wikipedia.org/wiki/ZeroMQ) is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API server to the ZMQ endpoint, where the Catapult REST component listens. It is an alternative to REST WebSockets, aimed to be used when performance is critical.
+[ZeroMQ](https://en.wikipedia.org/wiki/ZeroMQ) is an asynchronous messaging library, which enables real-time subscriptions. It transports notifications from the API server to the ZMQ endpoint, where the Sirius-Chain REST component listens. It is an alternative to REST WebSockets, aimed to be used when performance is critical.
 
 
 ## REST Component
 
-**Repository**: [Catapult REST](https://github.com/proximax-storage/catapult-rest)
+**Repository**: [Sirius-Chain REST](https://github.com/proximax-storage/catapult-rest)
 
 The REST component handles JSON API client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using [WebSockets](../rest-api/websockets.md).
 
@@ -91,6 +91,6 @@ Each REST component connects to one API instance, sending new transactions using
 
 ## Guides
 
-- [Running Catapult locally](https://github.com/tech-bureau/catapult-service-bootstrap/)
+- [Running Sirius-Chain locally](#)
 
-Deploy a Catapult full node for learning and development purposes.
+Deploy a Sirius-Chain full node for learning and development purposes.

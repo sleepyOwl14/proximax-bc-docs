@@ -8,7 +8,7 @@ Sign automatically transactions pending to be cosigned.
 
 - Finish [creating an escrow with aggregate bonded transaction guide](./creating-an-escrow-with-aggregate-bonded-transaction.md)
 - Received some aggregate bonded transaction
-- NEM2-SDK
+- XPX-Chain-SDK
 - A text editor or IDE
 - An account with XPX
 

@@ -1,29 +1,29 @@
 ---
 id: migration
-title: Preparing for NEM2-SDK 1.0.0
+title: Preparing for XPX-Chain-SDK 1.0.0
 sidebar_label: Migration from NIS1
 ---
-We are pleased to present NEM-2SDK 0.9.1. These release notes include NEM2-SDK new features and breaking changes over its predecessor NEM-Library.
+We are pleased to present NEM-2SDK 0.9.1. These release notes include XPX-Chain-SDK new features and breaking changes over its predecessor NEM-Library.
 
 <div class=info>
 
 **Warning**
 
-The SDKs methods could change until it reaches the stable version 1.0.0. For now, Catapult is only available in a test net environment. Consider it before applying changes and uploading your software to production.
+The SDKs methods could change until it reaches the stable version 1.0.0. For now, Sirius-Chain is only available in a test net environment. Consider it before applying changes and uploading your software to production.
 
 </div>
 
 ## Install latest version
 
-Select your [programming language](./overview.md) and [install the latest version](../getting-started/setting-up-workstation.md#setting-up-the-development-environment). Make sure to uninstall previous versions of NEM2-SDK or NEM Library.
+Select your [programming language](./overview.md) and [install the latest version](../getting-started/setting-up-workstation.md#setting-up-the-development-environment). Make sure to uninstall previous versions of XPX-Chain-SDK or NEM Library.
 
 ## What is new?
 
-NEM2-SDK shares the same design/architecture between programming languages. That means fast language adaptation, cohesion and shared knowledge between NEM developers, most rapid SDK updates and fewer bugs.
+XPX-Chain-SDK shares the same design/architecture between programming languages. That means fast language adaptation, cohesion and shared knowledge between NEM developers, most rapid SDK updates and fewer bugs.
 
-NEM-SDK does not add features that are not 100% related to [Catapult REST API](../rest-api/overview.md#requests). Instead, it permits to be extended by the use of new standalone [libraries](./extending-proximax-blockchain-capabilities.md).
+NEM-SDK does not add features that are not 100% related to [Sirius-Chain REST API](../rest-api/overview.md#requests). Instead, it permits to be extended by the use of new standalone [libraries](./extending-sirius-chain-capabilities.md).
 
-The new SDK implements the new features available in Catapult.
+The new SDK implements the new features available in Sirius-Chain.
 
 ## Repositories
 
@@ -137,10 +137,10 @@ The new SDK implements the new features available in Catapult.
 
 **Package name**
 
-Import nem2-sdk instead of nem-library.
+Import xpx-chain-sdk instead of nem-library.
 
 ```js
-import { ... } from 'nem2-sdk';
+import { ... } from 'xpx-chain-sdk';
 ```
 
 **Removed network bootstrapping**
@@ -149,7 +149,7 @@ When using NEM Library, the network was selected when initiating a project.
 
 In this new version, bootstrapping the network is not needed anymore.
 
-NEM2-SDK allows you create transactions for different networks in the same project by providing the network when creating transactions.
+XPX-Chain-SDK allows you create transactions for different networks in the same project by providing the network when creating transactions.
 
 ## Repositories
 
@@ -249,7 +249,7 @@ Account Info
 
 - Unified create and createWithMosaics constructors to create.
 - Create constructor needs network type as a property.
-- Unified xem and mosaics properties to mosaics array.
+- Unified xpx and mosaics properties to mosaics array.
 - Changed other property names and types.
 
 **ProvisionNamespaceTransaction**

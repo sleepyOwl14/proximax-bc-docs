@@ -2,11 +2,11 @@
 id: tools
 title: Tools
 ---
-Use one of the following tools to interact with Catapult REST API, particularly for PUT and POST methods.
+Use one of the following tools to interact with Sirius-Chain REST API, particularly for PUT and POST methods.
 
-## ProximaX-SDK
+## XPX-Chain-SDK
 
-The **ProximaX Software Development Kit** is the primary software development tool to create NEM2 components, such as additional tools, libraries or applications.
+The **Sirius-Chain Software Development Kit** is the primary software development tool to create Sirius-Chain components, such as additional tools, libraries or applications.
 
 - [Reference](../sdks/overview.md)
 - [Guides](../built-in-features/account.md)
@@ -16,5 +16,5 @@ The **ProximaX Software Development Kit** is the primary software development to
 An open source HTTP client, available for Mac, Windows and Linux.
 
 1. Download [Insomnia app](https://insomnia.rest/) for your operative system.
-2. Import the `Insomnia spec` for ProximaX.
+2. Import the `Insomnia spec` for Sirius-Chain.
 

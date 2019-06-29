@@ -3,19 +3,19 @@ id: rest-api-overview
 title: REST API Overview
 sidebar_label: Overview
 ---
-**Catapult REST API** combines HTTP and WebSockets to perform read and write actions in the ProximaX blockchain.
+**Sirius-Chain REST API** combines HTTP and WebSockets to perform read and write actions in the Sirius-Chain.
 
 ## Requests
 
-Catapult REST uses port `3000`. It accepts both HTTP **GET**, **PUT** and **POST** requests.
+Sirius-Chain REST uses port `3000`. It accepts both HTTP **GET**, **PUT** and **POST** requests.
 
-Assuming that Catapult REST is running locally, HTTP GET requests can be executed from a browser and have the form:
+Assuming that Sirius-Chain REST is running locally, HTTP GET requests can be executed from a browser and have the form:
 
 [http://localhost:3000/](http://localhost:3000/)<path-to-API-request>
 
 HTTP PUT and POST requests use JSON structures in the request body. Request returns data (if any is returned) using JSON structures. This kind of request cannot usually be executed from within the browser unless you use a [plugin](./tools.md) which enables you to do it.
 
-[Catapult REST API Endpoints](/endpoints)
+[Sirius-Chain REST API Endpoints](/endpoints)
 
 ## Http errors
 
@@ -47,4 +47,4 @@ message |	Error explained in human-readable format.
 
 Javascript operate on 32 bit values. To enable representation up to 64 bits, the API returns numbers encoded in two parts: `lower` and `higher`.
 
-Check [how to compact lower and higher into a single value](https://github.com/proximax-storage/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37).
+Check [how to compact lower and higher into a single value](https://github.com/proximax-storage/js-xpx-chain-library/blob/f171afb516a282f698081aea407339cfcd21cd63/src/coders/uint64.js#L37).

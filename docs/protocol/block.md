@@ -6,9 +6,9 @@ The central element of every cryptocurrency is a public ledger called the called
 
 Since the blocks in the chain are ordered, the complete transaction history is held in the blockchain. Subsequent blocks in the blockchain have increasing heights that differ by one.
 
-Blocks are stored in a database as permanent medium. NEM calls the first block in the chain the nemesis block.
+Blocks are stored in a database as permanent medium. Sirius-Chain calls the first block in the chain the nemesis block.
 
-NEM blocks complete every `15` seconds, making transactions confirm quickly enough for everyday use.
+Sirius-Chain blocks complete every `15` seconds, making transactions confirm quickly enough for everyday use.
 
 <div class="info">
 

@@ -10,7 +10,7 @@ First, you are going to turn a 1-of-2 multisig account into a 2-of-2. Then, you 
 
 - Finish [converting an account to multisig guide](./converting-an-account-to-multisig.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 - One multisig account
 
 ## Let’s get into some code

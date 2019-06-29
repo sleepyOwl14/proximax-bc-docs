@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Developer Center', // Title for your website.
+  title: 'Sirius-Chain Developer Center', // Title for your website.
   tagline: 'A website for blockchain developer',
   url: 'https://bcdocs.xpxsirius.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
@@ -30,7 +30,7 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'Developer Center',
+  projectName: 'Sirius-Chain Developer Center',
   organizationName: 'ProximaX',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...

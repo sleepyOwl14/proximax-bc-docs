@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Catapult REST API Reference
+  title: Sirius-Chain REST API Reference
   description: ""
   license:
     name: Apache 2.0
@@ -974,7 +974,7 @@ paths:
       - Transaction routes
       summary: Announce a new transaction
       description: Announces a transaction to the network. It is recommended to use
-        the NEM2-SDK to announce transactions as they should be [serialized](https://proximax-storage.github.io/api/serialization.html).
+        the XPX-Chain-SDK to announce transactions as they should be [serialized](https://proximax-storage.github.io/api/serialization.html).
       operationId: announceTransaction
       requestBody:
         description: The transaction [payload](https://proximax-storage.github.io/api/serialization.html).
@@ -1641,7 +1641,7 @@ components:
           example: mijinTest
         description:
           type: string
-          example: catapult development network
+          example: Sirius-Chain development network
     transactionHashes:
       type: object
       properties:

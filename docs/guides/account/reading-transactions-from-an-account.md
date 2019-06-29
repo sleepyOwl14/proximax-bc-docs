@@ -8,7 +8,7 @@ Get the list of [transactions](../../protocol/transaction.md) where an [account]
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 - An account that has received some transaction
 
 ## Let’s get into some code
@@ -49,7 +49,7 @@ accountHttp
 
 <!--bash-->
 ```sh
-nem2-cli account transactions --publickey 7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246 --numtransactions 10
+xpx-cli account transactions --publickey 7D08373CFFE4154E129E04F0827E5F3D6907587E348757B0F87D2F839BF88246 --numtransactions 10
 ```
 
 <!--Java-->
@@ -75,7 +75,7 @@ System.out.print(transactions);
 
 **Note**
 
-Get filtered the transactions received (incoming) from the ones sent (outgoing) checking the complete [accountHttp definition](https://proximax-storage.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html).
+Get filtered the transactions received (incoming) from the ones sent (outgoing) checking the complete [accountHttp definition](https://proximax-storage.github.io/tsjs-xpx-chain-sdk/classes/_infrastructure_accounthttp_.accounthttp.html).
 
 </div>
 

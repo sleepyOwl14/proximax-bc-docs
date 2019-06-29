@@ -2,7 +2,7 @@
 id: writing-first-application
 title: Writing your first application
 ---
-This guide will take you through the ProximaX Sirius Chain development cycle. You will send your first transaction to the blockchain after combining some Sirius Chain [built-in features](../built-in-features/account.md).
+This guide will take you through the Sirius-Chain development cycle. You will send your first transaction to the blockchain after combining some Sirius-Chain [built-in features](../built-in-features/account.md).
 
 ## Background
 
@@ -27,7 +27,7 @@ The ticket vendor wants to set up a system to:
 3. Avoid non-authentic tickets and duplicate ones.
 </div>
 
-**Why should we use ProximaX Sirius Chain?**
+**Why should we use Sirius-Chain?**
 
 Blockchain technology makes sense in cases where:
 
@@ -35,7 +35,7 @@ Blockchain technology makes sense in cases where:
 - These participants need to trust each other.
 - There is the need to keep track of an immutable set of events.
 
-ProximaX Sirius Chain is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
+Sirius-Chain is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
 
@@ -43,7 +43,7 @@ The rest of the code remains **off-chain**. This reduces the inherent immutabili
 
 - Finish [getting started section](./setting-up-workstation.md)
 - Text editor or IDE
-- XPX-SDK and XPX2-CLI
+- XPX-Chain-SDK and XPX2-CLI
 - An account with XPX
 
 ## Let’s get into some code
@@ -105,7 +105,7 @@ $> xpx2-cli monitor confirmed
 
 **3. Creating the ticket**
 
-We are representing the ticket as a ProximaX mosaic. [Mosaics](../built-in-features/mosaic.md) can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the ticket buyer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
+We are representing the ticket as a mosaic. [Mosaics](../built-in-features/mosaic.md) can be used to represent any asset in the blockchain, such as objects, tickets, coupons, stock share representation, and even your cryptocurrency. They have configurable properties, which are defined at the moment of their creation. For example, we opt to set **transferable property to false**. This means that the ticket buyer can only send back the ticket to the creator of the mosaic, avoiding the ticket reselling.
 
 Before creating a mosaic with the ticket vendor account, you need to register a [namespace](../built-in-features/namespace.md). A namespace is a unique name in the network that gives a recognizable name to your assets.
 
@@ -129,7 +129,7 @@ $> xpx2-cli transaction mosaic --mosaicname ticket--namespacename company--amoun
 
 **4. Sending the ticket**
 
-Send one `company:ticket` to the ticket vendor account announcing a [transfer transaction](../built-in-features/transfer-transaction.md), one of the most commonly used actions in ProximaX.
+Send one `company:ticket` to the ticket vendor account announcing a [transfer transaction](../built-in-features/transfer-transaction.md), one of the most commonly used actions in Sirius-Chain.
 
 1. Prepare the transfer transaction. Three main attributes form a transfer transaction:
 
@@ -239,8 +239,8 @@ $> xpx2-cli account info --profile buyer
 
 Did you solve the proposed use case?
 
-- Identify each ticket buyer: Creating ProximaX accounts for each buyer.
+- Identify each ticket buyer: Creating Sirius-Chain accounts for each buyer.
 - Avoid ticket reselling: Creating a non-transferable mosaic.
 - Avoid non-authentic tickets and duplicate ones: Creating a unique namespace and a mosaic named `company:ticket`.
 
-Continue learning about more [ProximaX built-in features](../built-in-features/account.md) or practicing with [self-paced training](./self-paced-training.md).
+Continue learning about more [Sirius-Chain built-in features](../built-in-features/account.md) or practicing with [self-paced training](./self-paced-training.md).

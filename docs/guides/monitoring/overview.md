@@ -12,12 +12,6 @@ hide_title : true
 
 </div>
 
-## [Turning the asynchronous transaction announcement into synchronous](./turning-the-asynchronous-transaction-announcement-into-synchronous.md)
-
-Turn asynchronous transaction announcement into synchronous with nem2-camel.
-
-***
-
 ## [Monitoring a transaction status](./monitoring-a-transaction-status.md)
 
 Make sure a transaction gets included in the blockchain after being announced.

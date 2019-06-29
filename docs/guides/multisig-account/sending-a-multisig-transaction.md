@@ -12,7 +12,7 @@ Send a transaction involving a [multisig](../../built-in-features/multisig-accou
 
 Alice and Bob live together and have separate accounts. They also have a shared account so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account is in NEM translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
+This shared account is in Sirius-Chain translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
 
 Remember that a multisig account has cosignatories accounts, and it cannot start transactions itself. Only the cosignatories can initiate transactions.
 
@@ -20,7 +20,7 @@ Remember that a multisig account has cosignatories accounts, and it cannot start
 
 - Finish [sending a transfer transaction guide](../transaction/sending-a-transfer-transaction.md)
 - Finish [converting an account to multisig guide](./converting-an-account-to-multisig.md)
-- NEM2-SDK
+- XPX-Chain-SDK
 - A text editor or IDE
 - An multisig account with XPX
 - An cosignatory account with XPX
@@ -228,7 +228,7 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 1. Open a new terminal to [monitor](../monitoring/monitoring-a-transaction-status.md) the aggregate bonded transaction.
 
 ```
-$> nem2-cli monitor aggregatebonded --address <your-address-here>
+$> xpx-cli monitor aggregatebonded --address <your-address-here>
 ```
 
 2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XPX to avoid network spamming. Once all cosigners sign the transaction, the amount of XPX becomes available again in Bob’s account. After [hash lock transaction](../../built-in-features/aggregate-transaction.md#hashlocktransaction) has been confirmed, [announce the aggregate bonded transaction](../../built-in-features/aggregate-transaction.md).

@@ -1,22 +1,22 @@
 ---
-id: atomic-cross-chain-swap-between-NEM-public-and-private-chain
-title: Atomic cross-chain swap between NEM public and private chain
+id: atomic-cross-chain-swap-between-sirius-chain-public-and-private-chain
+title: Atomic cross-chain swap between Sirius-Chain public and private chain
 ---
 [Cross-chain swaps](../../built-in-features/cross-chain-swaps.md) enable trading tokens between different blockchains, without using an intermediary party in the process.
 
 This exchange of tokens will succeed atomically. If some of the actors do not agree, each of them will receive the locked tokens back after a determined amount of time.
 
-When talking about tokens in NEM, we are actually referring to [mosaics](../../built-in-features/mosaic.md). Catapult enables atomic swaps through [secret lock](../../built-in-features/cross-chain-swaps.md#secretlocktransaction) / [secret proof transaction](../../built-in-features/cross-chain-swaps.md#secretprooftransaction) mechanism.
+When talking about tokens in Sirius-Chain, we are actually referring to [mosaics](../../built-in-features/mosaic.md). Sirius-Chain enables atomic swaps through [secret lock](../../built-in-features/cross-chain-swaps.md#secretlocktransaction) / [secret proof transaction](../../built-in-features/cross-chain-swaps.md#secretprooftransaction) mechanism.
 
 ## Background
 
-Alice and Bob want to exchange **10 alice:token for 10 bob:token**. The problem is that they are not in the same blockchain: alice:token is defined in NEM public chain, whereas bob:token is only present in a private chain using catapult technology.
+Alice and Bob want to exchange **10 alice:token for 10 bob:token**. The problem is that they are not in the same blockchain: alice:token is defined in Sirius public chain, whereas bob:token is only present in a private chain using Sirius-Chain technology.
 
 <div class=info>
 
 **Note**
 
-These two chain shares are SDK. You could implement atomic cross-chain swap between NEM public chain and other blockchains if they permit the secret lock/proof mechanism.
+These two chain shares are SDK. You could implement atomic cross-chain swap between Sirius public chain and other blockchains if they permit the secret lock/proof mechanism.
 
 </div>
 
@@ -32,14 +32,14 @@ However, they do not trust each other that much. Bob could decide his mosaics to
 ## Prerequisites
 
 - Finish [creating an escrow with aggregate bonded transaction guide](../aggregate-transaction/creating-an-escrow-with-aggregate-bonded-transaction.md)
-- NEM2-SDK
+- XPX-Chain-SDK
 - A text editor or IDE
 
 ## Let’s get into some code
 
 Trading tokens directly from one blockchain to the other is not possible, due to the technological differences between them.
 
-In case of NEM public and private chain, the same mosaic name could have a different definition and distribution, or even not exist. Between Bitcoin and NEM, the difference is even more evident, as each blockchain uses an entirely different technology.
+In case of Sirius public and private chain, the same mosaic name could have a different definition and distribution, or even not exist. Between Bitcoin and Sirius-Chain, the difference is even more evident, as each blockchain uses an entirely different technology.
 
 Instead of transferring tokens between different chains, the trade will be performed inside each chain. The Secret proof / secret lock mechanism guarantees the token swap occurs atomically.
 

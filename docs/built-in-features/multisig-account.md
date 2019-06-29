@@ -4,9 +4,9 @@ title: Multisig Account
 ---
 Editable on-chain contracts, the most powerful way to secure funds and enable joint accounts.
 
-A ProximaX [account](./account.md) can be [converted to multisig](../guides/multisig-account/converting-an-account-to-multisig.md). From that moment on, the account cannot announce transactions by itself. It will require other accounts to announce transactions for them. These other accounts are the multisig cosignatories.
+A Sirius-Chain [account](./account.md) can be [converted to multisig](../guides/multisig-account/converting-an-account-to-multisig.md). From that moment on, the account cannot announce transactions by itself. It will require other accounts to announce transactions for them. These other accounts are the multisig cosignatories.
 
-Nevertheless, it is not always necessary to force all cosignatories to cosign the transaction. ProximaX allows to set up the minimum number of consignatory agreements. These properties can be edited afterwards to suit almost all needs. ProximaX’s current implementation of multisig is “M-of-N”. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
+Nevertheless, it is not always necessary to force all cosignatories to cosign the transaction. Sirius-Chain allows to set up the minimum number of consignatory agreements. These properties can be edited afterwards to suit almost all needs. Sirius-Chain current implementation of multisig is “M-of-N”. This means that M can be any number equal to or less than N, i.e., 1-of-4, 2-of-2, 4-of-9, 9-of-10 and so on.
 
 The number of minimum cosignatures to approve transactions and remove cosignatories is editable.
 

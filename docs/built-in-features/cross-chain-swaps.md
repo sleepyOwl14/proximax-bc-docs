@@ -16,7 +16,7 @@ In other words, to reduce counterparty risk, the receiver of a payment needs to 
 
 <p class=caption>Atomic cross-chain swap sequence diagram</p>
 
-When talking about tokens in ProximaX, we are actually referring to [mosaics](./mosaic.md). Catapult enables atomic swaps through [secret lock](#secretlocktransaction) / [secret proof transaction](#secretprooftransaction) mechanism.
+When talking about tokens in Sirius-Chain, we are actually referring to [mosaics](./mosaic.md). Sirius Chain enables atomic swaps through [secret lock](#secretlocktransaction) / [secret proof transaction](#secretprooftransaction) mechanism.
 
 ## Guides
 
@@ -28,7 +28,7 @@ When talking about tokens in ProximaX, we are actually referring to [mosaics](./
 
 </div>
 
-- [Atomic cross-chain swap between ProximaX public and private chain](../guides/cross-chain-swaps/atomic-cross-chain-swap-between-ProximaX-public-and-private-chain.md)
+- [Atomic cross-chain swap between Sirius-Chain public and private chain](../guides/cross-chain-swaps/atomic-cross-chain-swap-between-sirius-chain-public-and-private-chain.md)
 
     Cross-chain swaps enable trading tokens between different blockchains, without using an intermediary party in the process.
 

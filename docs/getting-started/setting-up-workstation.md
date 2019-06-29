@@ -2,27 +2,25 @@
 id: setting-up-workstation
 title: Setting up your workstation
 ---
-This first guide will walk you through a step-by-step installation of the required tools to start developing on Sirius Chain.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on Sirius-Chain.
 
-## Running Sirius Chain Service Bootstrap
-![Sirius Chain Layer](/img/four-layer-architecture-basic.png "Sirius Chain Layer")
+## Running Sirius-Chain Service Bootstrap
+![Sirius-Chain Layer](/img/four-layer-architecture-basic.png "Sirius-Chain Layer")
 
-**Sirius Chain Server nodes** (layer 1) build the peer-to-peer blockchain network. **Sirius Chain Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
+**Sirius-Chain Server nodes** (layer 1) build the peer-to-peer blockchain network. **Sirius-Chain Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
 
-You are going to run a private chain for learning purposes using [Sirius Chain Service Bootstrap](https://github.com/tech-bureau/sirius-Chain-service-bootstrap). This service runs Sirius Chain server instances and Sirius Chain REST nodes locally.
+You are going to run a private chain for learning purposes using [Sirius-Chain Service Bootstrap](https://github.com/tech-bureau/sirius-Chain-service-bootstrap). This service runs Sirius-Chain server instances and Sirius-Chain REST nodes locally.
 
 1. Make sure you have [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed before running the following commands:
 
 ```
-$> git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch v0.1.0
-$> cd catapult-service-bootstrap
-$> docker-compose up
+~~This section is not ready right now
 ```
 
 <div class="info">
 
 **NOTE** <br>
-Is catapult service bootstrap not working? Check [these troubleshooting tips](https://github.com/tech-bureau/sirius-Chain-service-bootstrap#known-issues).
+Is Sirius Chain service bootstrap not working? Check [these troubleshooting tips](#).
 </div>
 
 ######
@@ -33,11 +31,11 @@ $> curl localhost:3000/block/1
 ```
 
 ## Creating a test account
-An account is a key pair (private and public key) associated to a mutable state stored in the ProximaX Sirius Chain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a key pair (private and public key) associated to a mutable state stored in the Sirius-Chain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
 The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
 
-Finally, the account address is generated with the public key, following the ProximaX blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
+Finally, the account address is generated with the public key, following the Sirius-Chain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
 [XPX2-CLI](../client/overview.md) conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
@@ -53,7 +51,7 @@ $> sudo npm install --global xpx2-cli
 $> xpx2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000
 ```
 
-The `network flag` is set to MIJIN_TEST. Test network is an alternative ProximaX blockchain used for development and testing purposes.
+The `network flag` is set to MIJIN_TEST. Test network is an alternative Sirius-Chain used for development and testing purposes.
 
 Use `save flag` to store the account on your computer. XPX2-CLI uses stored account to sign the transactions that you start.
 
@@ -63,11 +61,11 @@ Use `save flag` to store the account on your computer. XPX2-CLI uses stored acco
 
 ## What is XPX and how to get it?
 
-The underlying cryptocurrency of the ProximaX network is called **XPX**. Every action on the ProximaX blockchain costs XPX, in order to provide an incentive for those who validate and secure the network.
+The underlying cryptocurrency of the Sirius-Chain network is called **XPX**. Every action on the Sirius-Chain costs XPX, in order to provide an incentive for those who validate and secure the network.
 
 Let’s use an account which already has XPX. We will need it to register the namespace and mosaic.
 
-1. Open a terminal, and go to the directory where you have download Sirius Chain Bootstrap Service.
+1. Open a terminal, and go to the directory where you have download Sirius-Chain Bootstrap Service.
 
 ```
 $> cd  build/generated-addresses/
@@ -80,7 +78,7 @@ $> xpx2-cli profile create
 
 Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
 Introduce your private key: 41************************************************************FF
-Introduce ProximaX 2 Node URL. (Example: http://localhost:3000): http://localhost:3000
+Introduce Sirius-Chain Node URL. (Example: http://localhost:3000): http://localhost:3000
 Insert profile name (blank means default and it could overwrite the previous profile):
 ```
 ## Setting up the development environment
@@ -101,7 +99,7 @@ $> npm install tsjs-xpx-chain-sdk rxjs
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-3. tsjs-xpx-chain-sdk is build with TypeScript language. It is recommended to use TypeScript instead of JavaScript when building applications for ProximaX Sirius Chain.
+3. tsjs-xpx-chain-sdk is build with TypeScript language. It is recommended to use TypeScript instead of JavaScript when building applications for Sirius-Chain.
 
 Make sure you have at least version 2.5.X installed.
 ```

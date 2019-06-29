@@ -21,9 +21,9 @@ In this example, imagine the two parties agree on a virtual service, implying th
 4. Buyer approves goods or service
 5. Escrow releases payment to the seller
 
-**How is it applied to Proximax Sirius Chain?**
+**How is it applied to Proximax Sirius-Chain?**
 
-Normalizing the language into Sirius Chain related concepts:
+Normalizing the language into Sirius-Chain related concepts:
 
 **contractual arrangement**
 

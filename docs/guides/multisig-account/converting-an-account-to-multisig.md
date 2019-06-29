@@ -8,7 +8,7 @@ Create a 1-of-2 [multisig account](../../built-in-features/multisig-account.md),
 
 Alice and Bob live together and have separate [accounts](../../built-in-features/account.md). They also have a shared account so that if Bob is out shopping, he can buy groceries for both himself and Alice.
 
-This shared account is in NEM translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
+This shared account is in Sirius-Chain translated as 1-of-2 multisig, meaning that one cosignatory needs to cosign the transaction to be included in a block.
 
 ![Multisig 1 of 2](/img/multisig-1-of-2.png "Multisig 1 of 2")
 
@@ -20,7 +20,7 @@ Remember that a multisig account has cosignatories accounts, and it cannot start
 
 - Finish [creating and opening accounts guide](../account/creating-and-opening-an-account.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 - Two accounts (public keys)
 - One account with XPX
 

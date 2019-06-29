@@ -8,7 +8,7 @@ Get notified when a new [block](../../protocol/block.md) is included.
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 
 ## Let’s get into some code
 
@@ -52,7 +52,7 @@ listener.open().then(() => {
 
 <!--Bash-->
 ```sh
-nem2-cli monitor block
+xpx-cli monitor block
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

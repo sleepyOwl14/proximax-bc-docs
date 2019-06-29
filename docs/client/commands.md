@@ -12,7 +12,7 @@ Creates a new profile.
 
     -p, --privatekey <privatekey> - Private key
     -n, --network <network>       - Network Type: MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST
-    -u, --url <url>               - Sirius Chain Node URL. Example: http://localhost:3000
+    -u, --url <url>               - Sirius-Chain Node URL. Example: http://localhost:3000
     --profile <profile>           - (Optional) profile name, if not private key will be stored as default
 
 **Command**
@@ -49,7 +49,7 @@ Generated accounts can be stored as named profiles by adding a node url.
 **Options**
 
     -s, --save              - (Optional) Save profile
-    -u, --url <url>         - (Optional) When saving profile, provide a NEM2 Node URL
+    -u, --url <url>         - (Optional) When saving profile, provide a Sirius-Chain Node URL
     --profile <profile>     - (Optional) When saving profile you can add profile name, if not will be stored as default
     -n, --network <network> - Network Type: MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST
 
@@ -215,7 +215,7 @@ You can send `multiple mosaics` splitting them with a comma, e.g: prx:xpx::10,np
 
 **Command**
 ```
-$> xpx2-cli transaction transfer --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "payout of 10 xem" --mosaics prx:xpx::10000000
+$> xpx2-cli transaction transfer --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "payout of 10 xpx" --mosaics prx:xpx::10000000
 ```
 
 ### Send pull transaction
@@ -231,7 +231,7 @@ Requests [mosaics](../built-in-features/mosaic.md) from an account. The other ac
 **Command**
 
 ```
-$> xpx2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xem" --mosaic prx:xpx::10000000
+$> xpx2-cli transaction pullfunds --recipient SDBDG4-IT43MP-CW2W4C-BBCSJJ-T42AYA-LQN7A4-VVWL --message "invoice 10 xpx" --mosaic prx:xpx::10000000
 ```
 
 ### Register root namespace
@@ -322,7 +322,7 @@ $> xpx2-cli mosaic info --name prx:xpx
 
 ## Monitoring
 
-The NEM2 command line interface has a set of monitoring commands to track events in the NEM blockchain.
+The Sirius-Chain command line interface has a set of monitoring commands to track events in the Sirius-Chain.
 
 ### Block
 

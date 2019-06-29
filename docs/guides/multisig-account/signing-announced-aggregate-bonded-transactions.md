@@ -10,7 +10,7 @@ This guide will show you how to cosign aggregate bonded transactions that requir
 
 - Finish [creating an escrow with aggregate bonded transaction guide](../aggregate-transaction/creating-an-escrow-with-aggregate-bonded-transaction.md)
 - Received some aggregate bonded transaction
-- NEM2-SDK
+- XPX-Chain-SDK
 - A text editor or IDE
 - An account with XPX
 
@@ -122,7 +122,7 @@ accountHttp
 
 <!--Bash-->
 ```
-nem2-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C
+xpx-cli transaction cosign --hash A6A374E66B32A3D5133018EFA9CD6E3169C8EEA339F7CCBE29C47D07086E068C
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

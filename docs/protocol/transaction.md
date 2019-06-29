@@ -41,7 +41,7 @@ There are different types of transactions. For example, you can transfer [mosaic
 
 Every transaction shares some common properties. Each transaction extends from the [transaction schema definition](./transaction.md#transaction), adding the type’s particular properties.
 
-Transactions are defined in a [serialized form](../rest-api/serialization.md). We recommend to [use the NEM2-SDK to define](https://github.com/proximax-storage/proximax-bc-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30) transactions.
+Transactions are defined in a [serialized form](../rest-api/serialization.md). We recommend to [use the XPX-Chain-SDK to define](https://github.com/proximax-storage/proximax-bc-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30) transactions.
 
 ## Fees
 
@@ -61,7 +61,7 @@ The harvesting nodes can decide their transaction inclusion strategy:
 - **Minimize-fees**: Philanthropic nodes. Include first transactions that other nodes do not want to include.
 - **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
-By default, the fee is paid in `XPX`, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another [mosaic](../built-in-features/mosaic.md) that better suits their needs.
+By default, the fee is paid in `XPX`, the underlying currency of the Sirius-Chain network. Private chains can edit the configuration of the network to eliminate fees, or use another [mosaic](../built-in-features/mosaic.md) that better suits their needs.
 
 ## Signing a transaction
 
@@ -69,9 +69,9 @@ Accounts must sign transactions before announcing them to the network. [Signing 
 
 For example, a transfer transaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account’s balance to another.
 
-The account generates the signature [signing the first 100 bytes of the defined transaction](https://github.com/proximax-storage/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64) with its private key. Then, the signature is appended to the transaction’s body, resulting in a signed transaction.
+The account generates the signature [signing the first 100 bytes of the defined transaction](https://github.com/proximax-storage/js-xpx-chain-library/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64) with its private key. Then, the signature is appended to the transaction’s body, resulting in a signed transaction.
 
-The hash of the transaction is generated once [the sha3-256 algorithm](https://github.com/proximax-storage/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76) is applied to the serialized transaction.
+The hash of the transaction is generated once [the sha3-256 algorithm](https://github.com/proximax-storage/js-xpx-chain-library/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76) is applied to the serialized transaction.
 
 ## Announcing a transaction
 
@@ -96,15 +96,11 @@ Blockchains are designed in a way that under certain circumstances recent blocks
 
 The “rewrite limit” is the maximum number of blocks that can be rolled back. Hence, forks can only be resolved up to a certain depth too.
 
-NEM has a rewrite limit of `360` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
+Sirius-Chain has a rewrite limit of `360` blocks. Once a transaction has more than 360 confirmations, it cannot be reversed.
 
 From experience, forks that are deeper than 20 blocks do not happen, unless there is a severe problem with the blockchain due to a bug in the code or an attack.
 
 ## Guides
-
-- [Turning the asynchronous transaction announcement into synchronous](../guides/monitoring/turning-the-asynchronous-transaction-announcement-into-synchronous.md)
-
-    Turn asynchronous transaction announcement into synchronous with nem2-camel.
 
 - [Monitoring a transaction status](../guides/monitoring/monitoring-a-transaction-status.md)
 

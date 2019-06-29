@@ -21,7 +21,7 @@ In computing, **reactive programming** is a declarative programming paradigm con
 
 The **observer pattern** is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. [Wikipedia reference](https://en.wikipedia.org/wiki/Observer_pattern).
 
-NEM2-SDK uses intensely ReactiveX Library. See [reactivex here](http://reactivex.io/).
+XPX-Chain-SDK uses intensely ReactiveX Library. See [reactivex here](http://reactivex.io/).
 
 - **Functional**: Developers can avoid complex stateful programs using clean input/output functions over observable streams.
 - **Less is more**: ReactiveX’s operators often reduce what was once an elaborate challenge into a few lines of code.
@@ -46,17 +46,17 @@ In case you are not familiar with ReactiveX and you still have to deliver someth
 
 ## Package Organization
 
-![nem2-sdk Architecture](/img/nem2-sdk-architecture.png "nem2-sdk Architecture")
+![xpx-chain-sdk Architecture](/img/xpx-chain-sdk-architecture.png "xpx-chain-sdk Architecture")
 
 <p class=caption>Package organization diagram</p>
 
 ## Infrastructure
 
-The HTTP requests are made following the Repository Pattern, and they return NEM Domain immutable models via the Observable Pattern.
+The HTTP requests are made following the Repository Pattern, and they return Sirius-Chain Domain immutable models via the Observable Pattern.
 
 ## Models
 
-The NEM Domain models are, usually, immutable by definition. The developer cannot change its attributes. Instead, the developers have to create new Transactions and dispatch them to ProximaX Blockchain via TransactionHTTP, to change the ProximaX Blockchain state.
+The Sirius-Chain Domain models are, usually, immutable by definition. The developer cannot change its attributes. Instead, the developers have to create new Transactions and dispatch them to Sirius-Chain via TransactionHTTP, to change the Sirius-Chain state.
 
 ## Services
 

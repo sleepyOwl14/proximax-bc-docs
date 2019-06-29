@@ -2,7 +2,7 @@
 id: aggregate-transaction
 title: Aggregate Transaction
 ---
-Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. ProximaX does this by generating a one-time disposable smart contract. When all involved [accounts][Account] have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
+Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. Sirius Chain does this by generating a one-time disposable smart contract. When all involved [accounts][Account] have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
 
 ## Examples
 ## Sending payouts
@@ -27,7 +27,7 @@ In this example, Alice is buying tickets with currency:euro. When the ticket dis
 
 Alice sends 10 € to Bob using an app to make payments. But she doesn’t have any XPX to pay the blockchain transaction fee.
 
-By creating an aggregate bonded transaction, she can convert USD to XPX to pay the fee. Now Alice and Bob can use ProximaX blockchain without ever having to buy or hold XPX.
+By creating an aggregate bonded transaction, she can convert USD to XPX to pay the fee. Now Alice and Bob can use Sirius-Chain without ever having to buy or hold XPX.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 

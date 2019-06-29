@@ -8,7 +8,7 @@ Get the public key and balance of an [account](../../built-in-features/account.m
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 
 ## Let’s get into some code
 
@@ -40,7 +40,7 @@ accountHttp
 
 <!--bash-->
 ```sh
-nem2-cli account info --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
+xpx-cli account info --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
 ```
 
 <!--Java-->
@@ -105,7 +105,7 @@ mosaicService
 
 <!--bash-->
 ```sh
-nem2-cli account info --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
+xpx-cli account info --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

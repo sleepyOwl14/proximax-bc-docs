@@ -13,7 +13,7 @@ A mosaic is like a file hosted on a domain and it represents an asset. Like a we
 ## Prerequisites
 
 - Finish [registering a namespace guide](../namespace/registering-a-namespace.md)
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 - A text editor or IDE
 - An account with XPX and at least one namespace
 
@@ -214,7 +214,7 @@ transactionHttp.announce(signedTransaction).toFuture().get();
 
 <!--Bash-->
 ```
-nem2-cli transaction mosaic --mosaicname token --namespacename foo --amount 1000000 --transferable --supplymutable --divisibility 0 --duration 1000
+xpx-cli transaction mosaic --mosaicname token --namespacename foo --amount 1000000 --transferable --supplymutable --divisibility 0 --duration 1000
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

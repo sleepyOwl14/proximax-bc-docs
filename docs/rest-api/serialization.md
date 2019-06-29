@@ -2,11 +2,11 @@
 id: serialization
 title: Serialization
 ---
-[Catbuffer library](https://github.com/proximax-storage/catbuffer) defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
+[Catbuffer library](https://github.com/proximax-storage/catbuffer) defines the protocol to serialize and deserialize Sirius-Chain entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
 
 ![Catbuffer](/img/catbuffer.png "Catbuffer")
 
-<p class=caption>NEM2-SDK serialization module</p>
+<p class=caption>XPX-Chain-SDK serialization module</p>
 
 The library accomplishes the following properties:
 
@@ -53,7 +53,7 @@ The generator creates a new file under `_generated/cpp` folder. Repeat the proce
 
 ## Writing a schema
 
-Are you writing a new catapult plugin that includes a new transaction type?
+Are you writing a new Sirius-Chain plugin that includes a new transaction type?
 
 In this example, we are examining how the [transfer.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/transfer.cats) schema works. Follow the same steps to define a new schema.
 
@@ -107,6 +107,6 @@ After compiling all the schemas for a selected language, move the generated file
 
 **Note**
 
-This section is incomplete. More information will be published once the NEM2-SDK is updated.
+This section is incomplete. More information will be published once the XPX-Chain-SDK is updated.
 
 </div>

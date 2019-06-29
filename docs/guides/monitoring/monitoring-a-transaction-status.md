@@ -15,11 +15,11 @@ When working with blockchain technology, it is interesting to “fire” the tra
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 
 ## Let’s get into some code
 
-Catapult enables asynchronous transaction announcement. After you publish a transaction, the API node will always accept it if it is well-formed.
+Sirius-Chain enables asynchronous transaction announcement. After you publish a transaction, the API node will always accept it if it is well-formed.
 
 At this time, the server does not ensure that the transaction is valid - for example, you don’t have the amount of asset units you want to send-, hence is not sure it will be added in a block.
 
@@ -91,7 +91,7 @@ listener.open().then(() => {
 
 <!--Bash-->
 ```
-nem2-cli monitor block
+xpx-cli monitor block
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -114,7 +114,7 @@ nem2-cli monitor block
 
 <!--Bash-->
 ```
-nem2-cli monitor status --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
+xpx-cli monitor status --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -134,7 +134,7 @@ nem2-cli monitor status --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
 
 <!--Bash-->
 ```
-nem2-cli monitor unconfirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
+xpx-cli monitor unconfirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -166,7 +166,7 @@ nem2-cli monitor unconfirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR
 
 <!--Bash-->
 ```
-nem2-cli monitor confirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
+xpx-cli monitor confirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -185,7 +185,7 @@ nem2-cli monitor confirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-I
 
 <!--Bash-->
 ```
-nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics prx:xpx::10000000 --message "Welcome to NEM"
+xpx-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics prx:xpx::10000000 --message "Welcome to Sirius-Chain"
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -202,7 +202,7 @@ If you are developing a small application, and monitoring asynchronous transacti
 
 ## Troubleshooting: Monitoring transactions on the client side
 
-The nem2-sdk for typescript base Listener was designed to work on Node.js backend environments.
+The xpx-chain-sdk for typescript base Listener was designed to work on Node.js backend environments.
 
 To make the code work in the client side (e.g., Angular, React, Vue.), pass the browser implementation of the WebSocket to the Listener.
 

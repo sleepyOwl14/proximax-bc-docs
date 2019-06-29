@@ -34,7 +34,7 @@
       "sdks/sdks-overview",
       "sdks/architecture",
       "sdks/languages",
-      "sdks/extending-proximax-blockchain-capabilities",
+      "sdks/extending-sirius-chain-capabilities",
       "sdks/sdk-development",
       "sdks/sdk-documentation"
     ],
@@ -56,7 +56,7 @@
       "guides/account/account-overview",
       "guides/account/create-open-account",
       "guides/account/getting-account-information",
-      "guides/account/getting-xem-amount-sent-to-account",
+      "guides/account/getting-xpx-amount-sent-to-account",
       "guides/account/reading-account-transactions"
       ],
     "Aggregate Transaction" : [
@@ -75,11 +75,10 @@
       ],
     "Cross Chain Swaps" : [
         "guides/cross-chain-swaps/cross-chain-swaps-overview",
-        "guides/cross-chain-swaps/atomic-cross-chain-swap-between-ProximaX-public-and-private-chain"
+        "guides/cross-chain-swaps/atomic-cross-chain-swap-between-sirius-chain-public-and-private-chain"
       ],
     "Monitoring" : [
         "guides/monitoring/monitoring-overview",
-        "guides/monitoring/turning-the-asynchronous-transaction-announcement-into-synchronous",
         "guides/monitoring/monitoring-a-transaction-status"
       ],
     "Mosaic" : [

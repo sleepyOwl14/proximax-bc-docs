@@ -42,7 +42,7 @@ class BriefDef extends React.Component{
         <div className="briefDef ">
           <p>
             ProximaX Sirius is a <b>developer-friendly blockchain platform</b>. 
-            The latest ProximaX version, Catapult, gives you direct access 
+            The latest ProximaX version, Sirius-Chain, gives you direct access 
             to a specialized set of <b>tested</b> and <b>secure on-blockchain features</b> using your favourite <b>programming language</b>.
           </p>
         </div>
@@ -108,7 +108,7 @@ class Index extends React.Component {
             content: 'Install the development kit and start coding your first blockchain app.',
             image: `${baseUrl}img/home-getting-started.png`,
             imageAlign: 'top',
-            link: `${baseUrl + docsUrl}/getting-started/setting-up-workstation`,
+            link: `${baseUrl + docsUrl}/getting-started/what-is-proximax-blockchain-layer`,
             title: 'Getting started',
           },
           {

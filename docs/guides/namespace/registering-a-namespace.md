@@ -10,12 +10,12 @@ A [namespace](../../built-in-features/namespace.md) is an on-chain unique domain
 
 A mosaic is like a file hosted on a domain and represents an asset. Like a website and directory, a mosaic can have the same name as other files on other domains. However, a namespace + mosaic is always unique.
 
-If an [account](../../built-in-features/account.md) creates a namespace, that namespace will appear as unique in the NEM ecosystem. For example, if one were to create a namespace called `foo`, a second person cannot create the same namespace.
+If an [account](../../built-in-features/account.md) creates a namespace, that namespace will appear as unique in the Sirius-Chain ecosystem. For example, if one were to create a namespace called `foo`, a second person cannot create the same namespace.
 
 ## Prerequisites
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 - A text editor or IDE
 - An account with XPX
 
@@ -61,7 +61,7 @@ final NamespaceId namespaceId = new NamespaceId("foo");
 
 <!--Bash-->
 ```bash
-nem2-cli namespace info --name foo
+xpx-cli namespace info --name foo
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -72,7 +72,7 @@ nem2-cli namespace info --name foo
 
 **Note**
 
-In Catapult, NEM blocks are complete every `15` seconds in average.
+In Sirius-Chain, Sirius-Chain blocks are complete every `15` seconds in average.
 
 </div>
 
@@ -147,7 +147,7 @@ transactionHttp
 
 <!--Bash-->
 ```bash
-nem2-cli transaction namespace --name foo --rootnamespace --duration 1000
+xpx-cli transaction namespace --name foo --rootnamespace --duration 1000
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

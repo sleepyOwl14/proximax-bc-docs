@@ -17,7 +17,7 @@ He chooses to send an aggregate complete transaction, so both will receive the f
 ## Prerequisites
 
 - Finish [sending a transfer transaction guide](../transaction/sending-a-transfer-transaction.md)
-- NEM2-SDK
+- XPX-Chain-SDK
 - A text editor or IDE
 - An account with XPX
 
@@ -40,7 +40,7 @@ const brotherAccount = Address.createFromRawAddress(brotherAddress);
 const sisterAddress = 'SCGPXB-2A7T4I-W5MQCX-FQY4UQ-W5JNU5-F55HGK-HBUN';
 const sisterAccount = Address.createFromRawAddress(sisterAddress);
 
-const amount = NetworkCurrencyMosaic.createRelative(10); // 10 xem represent 10 000 000 micro xem
+const amount = NetworkCurrencyMosaic.createRelative(10); // 10 xpx represent 10 000 000 micro xpx
 
 const brotherTransferTransaction = TransferTransaction.create(Deadline.create(), brotherAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
 const sisterTransferTransaction = TransferTransaction.create(Deadline.create(), sisterAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
@@ -67,7 +67,7 @@ const brotherAccount = Address.createFromRawAddress(brotherAddress);
 const sisterAddress = 'SCGPXB-2A7T4I-W5MQCX-FQY4UQ-W5JNU5-F55HGK-HBUN';
 const sisterAccount = Address.createFromRawAddress(sisterAddress);
 
-const amount = NetworkCurrencyMosaic.createRelative(10); // 10 xem represent 10 000 000 micro xem
+const amount = NetworkCurrencyMosaic.createRelative(10); // 10 xpx represent 10 000 000 micro xpx
 
 const brotherTransferTransaction = TransferTransaction.create(Deadline.create(), brotherAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
 const sisterTransferTransaction = TransferTransaction.create(Deadline.create(), sisterAccount, [amount], PlainMessage.create('payout'), NetworkType.MIJIN_TEST);
@@ -91,12 +91,12 @@ const aggregateTransaction = AggregateTransaction.createComplete(
 
         final Account account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 
-        final NetworkCurrencyMosaic xpx = NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)); // 10 xem represent 10 000 000 micro xem
+        final NetworkCurrencyMosaic xpx = NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)); // 10 xpx represent 10 000 000 micro xpx
 
         final TransferTransaction brotherTransferTransaction = TransferTransaction.create(
                 Deadline.create(2, HOURS),
                 brotherAddress,
-                Collections.singletonList(xem),
+                Collections.singletonList(xpx),
                 PlainMessage.create("payout"),
                 NetworkType.MIJIN_TEST
         );
@@ -104,7 +104,7 @@ const aggregateTransaction = AggregateTransaction.createComplete(
         final TransferTransaction sisterTransferTransaction = TransferTransaction.create(
                 Deadline.create(2, HOURS),
                 sisterAddress,
-                Collections.singletonList(xem),
+                Collections.singletonList(xpx),
                 PlainMessage.create("payout"),
                 NetworkType.MIJIN_TEST
         );

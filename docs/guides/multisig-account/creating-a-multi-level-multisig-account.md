@@ -18,7 +18,7 @@ The maximum depth of a multilevel multisig account is `3`.
 
 - Finish [converting an account to multisig guide](./converting-an-account-to-multisig.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-Chain-SDK or CLI
 
 ## Let’s get into some code
 

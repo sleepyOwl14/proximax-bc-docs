@@ -4,7 +4,7 @@ title: Websockets
 ---
 WebSockets make receiving notifications possible when a transaction or event occurs in the blockchain. The notification is received in real time without having to poll the API waiting for a reply.
 
-Interaction with API WebSockets in [NEM2-SDK](../sdks/overview.md) is done with **Listeners**.
+Interaction with API WebSockets in [XPX-Chain-SDK](../sdks/overview.md) is done with **Listeners**.
 
 ## Channels
 
