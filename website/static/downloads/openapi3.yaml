@@ -7,32 +7,32 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.11
 externalDocs:
-  description: NEM Developer Center
-  url: https://nemtech.github.io/
+  description: ProximaX Developer Center
+  url: https://proximax-storage.github.io/
 servers:
 - url: http://localhost:3000/
 tags:
 - name: Account routes
   description: |
-    [Account](https://nemtech.github.io/concepts/account.html) related endpoints.
+    [Account](https://proximax-storage.github.io/concepts/account.html) related endpoints.
 - name: Blockchain routes
   description: |
-    [Block](https://nemtech.github.io/concepts/block.html) related endpoints.
+    [Block](https://proximax-storage.github.io/concepts/block.html) related endpoints.
 - name: Mosaic routes
   description: |
-    [Mosaic](https://nemtech.github.io/concepts/mosaic.html) related endpoints.
+    [Mosaic](https://proximax-storage.github.io/concepts/mosaic.html) related endpoints.
 - name: Namespace routes
   description: |
-    [Namespace](https://nemtech.github.io/concepts/mosaic.html) related endpoints.
+    [Namespace](https://proximax-storage.github.io/concepts/mosaic.html) related endpoints.
 - name: Transaction routes
   description: |
-    [Transaction](https://nemtech.github.io/concepts/transaction.html) related endpoints.
+    [Transaction](https://proximax-storage.github.io/concepts/transaction.html) related endpoints.
 - name: Network routes
   description: |
     Network related endpoints.
 - name: Node routes
   description: |
-    [Node](https://nemtech.github.io/concepts/node.html) related endpoints.
+    [Node](https://proximax-storage.github.io/concepts/node.html) related endpoints.
 paths:
   /account/{accountId}:
     get:
@@ -301,7 +301,7 @@ paths:
       - Account routes
       summary: Get aggregate bonded transactions information
       description: |
-        Gets an array of [aggregate bonded transactions](https://nemtech.github.io/concepts/aggregate-transaction.html) where the account is the sender or requires to cosign the transaction.
+        Gets an array of [aggregate bonded transactions](https://proximax-storage.github.io/concepts/aggregate-transaction.html) where the account is the sender or requires to cosign the transaction.
       operationId: partialTransactions
       parameters:
       - name: publicKey
@@ -352,7 +352,7 @@ paths:
       - Account routes
       summary: Get account configurable properties information
       description: |
-        Returns the [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given account.
+        Returns the [configurable properties](https://proximax-storage.github.io/concepts/account-filter.html) for a given account.
       operationId: getAccountProperties
       parameters:
       - name: accountId
@@ -380,7 +380,7 @@ paths:
       - Account routes
       summary: Get account properties for given array of addresses
       description: |
-        Returns the [configurable properties](https://nemtech.github.io/concepts/account-filter.html) for a given array of addresses.
+        Returns the [configurable properties](https://proximax-storage.github.io/concepts/account-filter.html) for a given array of addresses.
       operationId: getAccountPropertiesFromAccounts
       requestBody:
         description: An array of addresses.
@@ -409,7 +409,7 @@ paths:
       tags:
       - Account routes
       summary: Get multisig account information
-      description: Returns the [multisig account](https://nemtech.github.io/concepts/multisig-account.html)
+      description: Returns the [multisig account](https://proximax-storage.github.io/concepts/multisig-account.html)
         information.
       operationId: getAccountMultisig
       parameters:
@@ -437,7 +437,7 @@ paths:
       tags:
       - Account routes
       summary: Get multisig account graph information
-      description: Returns the [multisig account](https://nemtech.github.io/concepts/multisig-account.html)
+      description: Returns the [multisig account](https://proximax-storage.github.io/concepts/multisig-account.html)
         graph.
       operationId: getAccountMultisigGraph
       parameters:
@@ -533,7 +533,7 @@ paths:
       tags:
       - Blockchain routes
       summary: Get transactions from a block
-      description: Returns an array of [transactions](https://nemtech.github.io/concepts/transaction.html)
+      description: Returns an array of [transactions](https://proximax-storage.github.io/concepts/transaction.html)
         included in a block for a given block height.
       operationId: getBlockTransactions
       parameters:
@@ -578,7 +578,7 @@ paths:
       tags:
       - Blockchain routes
       summary: Get the merkle path for a given a transaction and block
-      description: Returns the merkle path for a [transaction](https://nemtech.github.io/concepts/transaction.html)
+      description: Returns the merkle path for a [transaction](https://proximax-storage.github.io/concepts/transaction.html)
         included in a block. The path is the complementary data needed to calculate
         the merkle root. A client can compare if the calculated root equals the one
         recorded in the block header, verifying that the transaction was included
@@ -615,7 +615,7 @@ paths:
       tags:
       - Blockchain routes
       summary: Get receipts from a block
-      description: Returns the [receipts](https://nemtech.github.io/concepts/receipt.html)
+      description: Returns the [receipts](https://proximax-storage.github.io/concepts/receipt.html)
         linked to a block.
       operationId: getBlockReceipts
       parameters:
@@ -647,7 +647,7 @@ paths:
       tags:
       - Blockchain routes
       summary: Get the merkle path for a given a receipt statement hash and block
-      description: Returns the merkle path for a [receipt statement or resolution](https://nemtech.github.io/concepts/receipt.html)
+      description: Returns the merkle path for a [receipt statement or resolution](https://proximax-storage.github.io/concepts/receipt.html)
         linked to a block. The path is the complementary data needed to calculate
         the merkle root. A client can compare if the calculated root equals the one
         recorded in the block header, verifying that the receipt was linked with the
@@ -974,10 +974,10 @@ paths:
       - Transaction routes
       summary: Announce a new transaction
       description: Announces a transaction to the network. It is recommended to use
-        the NEM2-SDK to announce transactions as they should be [serialized](https://nemtech.github.io/api/serialization.html).
+        the NEM2-SDK to announce transactions as they should be [serialized](https://proximax-storage.github.io/api/serialization.html).
       operationId: announceTransaction
       requestBody:
-        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        description: The transaction [payload](https://proximax-storage.github.io/api/serialization.html).
         content:
           '*/*':
             schema:
@@ -1030,11 +1030,11 @@ paths:
       tags:
       - Transaction routes
       summary: Announce an aggregate bonded transaction
-      description: Announces an [aggregate bonded transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#aggregate-bonded)
+      description: Announces an [aggregate bonded transaction](https://proximax-storage.github.io/concepts/aggregate-transaction.html#aggregate-bonded)
         to the network.
       operationId: announcePartialTransaction
       requestBody:
-        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        description: The transaction [payload](https://proximax-storage.github.io/api/serialization.html).
         content:
           '*/*':
             schema:
@@ -1058,11 +1058,11 @@ paths:
       tags:
       - Transaction routes
       summary: Announce a cosignature transaction
-      description: Announces a [cosignature transaction](https://nemtech.github.io/concepts/aggregate-transaction.html#cosignature-transaction)
+      description: Announces a [cosignature transaction](https://proximax-storage.github.io/concepts/aggregate-transaction.html#cosignature-transaction)
         to the network.
       operationId: announceCosignatureTransaction
       requestBody:
-        description: The transaction [payload](https://nemtech.github.io/api/serialization.html).
+        description: The transaction [payload](https://proximax-storage.github.io/api/serialization.html).
         content:
           '*/*':
             schema:

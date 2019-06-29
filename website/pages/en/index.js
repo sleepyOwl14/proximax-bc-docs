@@ -129,7 +129,7 @@ class Index extends React.Component {
             content: 'From SDKs to extensions that make blockchain development easier.',
             image: `${baseUrl}img/home-references.png`,
             imageAlign: 'top',
-            link: `${baseUrl}references`,
+            link: '#',//`${baseUrl}references`,
             title: 'References',
           },
         ]}

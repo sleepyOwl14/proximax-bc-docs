@@ -2,7 +2,7 @@
 id: writing-first-application
 title: Writing your first application
 ---
-This guide will take you through the ProximaX development cycle. You will send your first transaction to the blockchain after combining some ProximaX [built-in features](../built-in-features/account.md).
+This guide will take you through the ProximaX Sirius Chain development cycle. You will send your first transaction to the blockchain after combining some Sirius Chain [built-in features](../built-in-features/account.md).
 
 ## Background
 
@@ -27,7 +27,7 @@ The ticket vendor wants to set up a system to:
 3. Avoid non-authentic tickets and duplicate ones.
 </div>
 
-**Why should we use ProximaX?**
+**Why should we use ProximaX Sirius Chain?**
 
 Blockchain technology makes sense in cases where:
 
@@ -35,7 +35,7 @@ Blockchain technology makes sense in cases where:
 - These participants need to trust each other.
 - There is the need to keep track of an immutable set of events.
 
-ProximaX is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
+ProximaX Sirius Chain is a **flexible blockchain** technology. Instead of uploading all the application logic into the blockchain, you can use its tested features through **API calls** for transfer and storage of value, authorization, traceability, and identification.
 
 The rest of the code remains **off-chain**. This reduces the inherent immutability risk, as you could change the process when necessary.
 
@@ -43,8 +43,8 @@ The rest of the code remains **off-chain**. This reduces the inherent immutabili
 
 - Finish [getting started section](./setting-up-workstation.md)
 - Text editor or IDE
-- NEM2-SDK and CLI
-- An account with XEM
+- XPX-SDK and XPX2-CLI
+- An account with XPX
 
 ## Let’s get into some code
 
@@ -57,11 +57,11 @@ First, we identify the actors involved in the problem we want to solve:
 
 We have decided to represent the ticket vendor and buyer as separate [accounts](../built-in-features/account.md). Each account is unique and identified by an address. An account has access to a deposit box in the blockchain, which can be modified with an appropriate private key.
 
-Have you loaded an account with test XEM? If it is not the case, go back to [getting started section](./setting-up-workstation.md). The account you have created represents the ticket vendor.
+Have you loaded an account with test XPX? If it is not the case, go back to [getting started section](./setting-up-workstation.md). The account you have created represents the ticket vendor.
 
 1. After running the following command, you should see on your screen a line similar to:
 ```
-$> nem2-cli account info
+$> xpx2-cli account info
 
 
 New Account: WCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6
@@ -73,10 +73,10 @@ Mosaics
 3628d0b327fb1dd8:       1000000
 ```
 
-2. This account owns 1.000.000 XEM. If your own mosaics is empty, follow the [previous guide instructions](./setting-up-workstation.md).
+2. This account owns 1.000.000 XPX. If your own mosaics is empty, follow the [previous guide instructions](./setting-up-workstation.md).
 3. Create a second account to identify the ticket buyer.
 ```
-$> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile buyer
+$> xpx2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile buyer
 ```
 
 **2. Monitoring the blockchain** 
@@ -90,17 +90,17 @@ We suggest opening three new terminals:
 1. The first terminal [monitors announced transactions](../guides/monitoring/monitoring-a-transaction-status.md) validation errors.
 
 ```
-$> nem2-cli monitor status
+$> xpx2-cli monitor status
 ```
 
 2. Monitoring `unconfirmed` shows you which transactions have reached the network, but are not included in a block yet.
 ```
-$> nem2-cli monitor unconfirmed
+$> xpx2-cli monitor unconfirmed
 ```
 
 3. Once a transaction is included, you will see it under the confirmed terminal.
 ```
-$> nem2-cli monitor confirmed
+$> xpx2-cli monitor confirmed
 ```
 
 **3. Creating the ticket**
@@ -112,7 +112,7 @@ Before creating a mosaic with the ticket vendor account, you need to register a 
 1. Register the namespace called `company`. Let’s check if this name is available.
 
 ```
-$> nem2-cli namespace info --name company
+$> xpx2-cli namespace info --name company
 ```
 
 Did you check what happened in terminals where you are monitoring your account transactions? The transaction first appeared under `unconfirmed` terminal and, after a while, got confirmed `confirmed`.
@@ -124,7 +124,7 @@ Did you check what happened in terminals where you are monitoring your account t
 - Divisibility should be set to 0, as no one should be able to send “0.5 company:tickets”.
 
 ```
-$> nem2-cli transaction mosaic --mosaicname ticket--namespacename company--amount 1000000 --supplymutable --divisibility 0 --duration 1000
+$> xpx2-cli transaction mosaic --mosaicname ticket--namespacename company--amount 1000000 --supplymutable --divisibility 0 --duration 1000
 ```
 
 **4. Sending the ticket**
@@ -144,7 +144,7 @@ Send one `company:ticket` to the ticket vendor account announcing a [transfer tr
 import {
     Account, Address, Deadline, UInt64, NetworkType, PlainMessage, TransferTransaction, Mosaic, MosaicId,
     TransactionHttp
-} from 'nem2-sdk';
+} from 'tsjs-xpx-chain-sdk';
 
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
@@ -157,13 +157,13 @@ const transferTransaction = TransferTransaction.create(
 
 <!--java-->
 ```java
-import io.nem.sdk.model.account.Address;
-import io.nem.sdk.model.blockchain.NetworkType;
-import io.nem.sdk.model.mosaic.Mosaic;
-import io.nem.sdk.model.mosaic.MosaicId;
-import io.nem.sdk.model.transaction.Deadline;
-import io.nem.sdk.model.transaction.PlainMessage;
-import io.nem.sdk.model.transaction.TransferTransaction;
+import io.proximax.sdk.model.account.Address;
+import io.proximax.sdk.model.blockchain.NetworkType;
+import io.proximax.sdk.model.mosaic.Mosaic;
+import io.proximax.sdk.model.mosaic.MosaicId;
+import io.proximax.sdk.model.transaction.Deadline;
+import io.proximax.sdk.model.transaction.PlainMessage;
+import io.proximax.sdk.model.transaction.TransferTransaction;
 
 import java.math.BigInteger;
 import java.util.Arrays;
@@ -224,7 +224,7 @@ transactionHttp.announceTransaction(signedTransaction).toFuture().get();
 
 <!--bash-->
 ```
-$> nem2-cli transaction transfer --recipient WD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics company:ticket::1 --message enjoy_your_ticket
+$> xpx2-cli transaction transfer --recipient WD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics company:ticket::1 --message enjoy_your_ticket
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -232,7 +232,7 @@ $> nem2-cli transaction transfer --recipient WD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-
 4. When the transaction is confirmed, check that the ticket buyer has received the ticket.
 
 ```
-$> nem2-cli account info --profile buyer
+$> xpx2-cli account info --profile buyer
 ```
 
 ## What’s next?

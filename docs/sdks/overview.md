@@ -18,7 +18,7 @@ The new SDK enables developers to focus on their product rather than on the NEM2
 NEM2-SDK shares the same design/architecture between programming languages to accomplish the next properties:
 
 - **Fast language adaptation**: There is a library for Java, but you need it for C# for example. As both SDKs share the same design, you can re-write the library faster, adapting the syntax to your language. It also applies to examples, projects, applications…
-- **Cohesion/shared knowledge cross NEM developers**: Be able to change between projects that use NEM, sharing the same design accompanied by the best practices.
+- **Cohesion/shared knowledge cross ProximaX developers**: Be able to change between projects that use ProximaX, sharing the same design accompanied by the best practices.
 - **Fast SDK updates**: Migrating any improvement from a NEM2-SDK implementation to the rest is faster.
 - **Fewer bugs**: If any bug appears in one language, it is faster to check and fix it.
 
@@ -36,4 +36,4 @@ Final information regarding compatibility with NIS1 is not available yet.
 
 Start planning the migration to NEM2-SDK to take advantage of new Catapult features and future releases.
 
-Check [Preparing for NEM2-SDK 1.0.0](./migration.md) to see new features and changes that break backward compatibility with NEM-Library.
+Check [Preparing for NEM2-SDK 1.0.0](./migration.md) to see new features and changes that break backward compatibility with ProximaX-Library.

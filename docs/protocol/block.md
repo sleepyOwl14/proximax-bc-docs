@@ -14,7 +14,7 @@ NEM blocks complete every `15` seconds, making transactions confirm quickly enou
 
 **Note**
 
-Configuration parameters are [editable](https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties). Public network configuration may differ.
+Configuration parameters are [editable](https://github.com/proximax-storage/catapult-server/blob/master/resources/config-network.properties). Public network configuration may differ.
 </div>
 
 ## Block creation

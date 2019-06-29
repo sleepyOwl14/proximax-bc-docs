@@ -16,5 +16,5 @@ The **ProximaX Software Development Kit** is the primary software development to
 An open source HTTP client, available for Mac, Windows and Linux.
 
 1. Download [Insomnia app](https://insomnia.rest/) for your operative system.
-2. Import the `Insomnia spec` for NEM.
+2. Import the `Insomnia spec` for ProximaX.
 

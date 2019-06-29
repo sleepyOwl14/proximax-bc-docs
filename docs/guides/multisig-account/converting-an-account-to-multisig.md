@@ -22,7 +22,7 @@ Remember that a multisig account has cosignatories accounts, and it cannot start
 - Text editor or IDE
 - NEM2-SDK or CLI
 - Two accounts (public keys)
-- One account with XEM
+- One account with XPX
 
 ## Let’s get into some code
 

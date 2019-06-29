@@ -22,12 +22,12 @@ Remember that a multisig account has cosignatories accounts, and it cannot start
 - Finish [converting an account to multisig guide](./converting-an-account-to-multisig.md)
 - NEM2-SDK
 - A text editor or IDE
-- An multisig account with XEM
-- An cosignatory account with XEM
+- An multisig account with XPX
+- An cosignatory account with XPX
 
 ## Let’s get into some code
 
-Bob has finished filling his basket, and he is ready to pay. The cashier’s screen indicates that the cost of the purchase adds up to 10 XEM.
+Bob has finished filling his basket, and he is ready to pay. The cashier’s screen indicates that the cost of the purchase adds up to 10 XPX.
 
 1. Bob needs to know which is the public key of the multisig account that he shares with Alice, and his private key to start announcing the transaction.
 
@@ -79,7 +79,7 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 
 - Recipient: Grocery’s address
 - Message: Grocery payment
-- Mosaics: [10 XEM]
+- Mosaics: [10 XPX]
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypeScript-->
@@ -87,8 +87,8 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 prx:xpx'),
     NetworkType.MIJIN_TEST);
 ```
 
@@ -97,8 +97,8 @@ const transferTransaction = TransferTransaction.create(
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
-    PlainMessage.create('sending 10 nem:xem'),
+    [NetworkCurrencyMosaic.createRelative(10)],
+    PlainMessage.create('sending 10 prx:xpx'),
     NetworkType.MIJIN_TEST);
 ```
 
@@ -107,8 +107,8 @@ const transferTransaction = TransferTransaction.create(
     final TransferTransaction transferTransaction = TransferTransaction.create(
         Deadline.create(2, HOURS),
         Address.createFromRawAddress(recipientAddress),
-        Collections.singletonList(XEM.createRelative(BigInteger.valueOf(10))),
-        PlainMessage.create("sending 10 nem:xem"),
+        Collections.singletonList(NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10))),
+        PlainMessage.create("sending 10 prx:xpx"),
         NetworkType.MIJIN_TEST
     );
 ```
@@ -231,14 +231,14 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 $> nem2-cli monitor aggregatebonded --address <your-address-here>
 ```
 
-2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XEM to avoid network spamming. Once all cosigners sign the transaction, the amount of XEM becomes available again in Bob’s account. After [hash lock transaction](../../built-in-features/aggregate-transaction.md#hashlocktransaction) has been confirmed, [announce the aggregate bonded transaction](../../built-in-features/aggregate-transaction.md).
+2. When an aggregate transaction is bonded, Bob needs to lock at least 10 XPX to avoid network spamming. Once all cosigners sign the transaction, the amount of XPX becomes available again in Bob’s account. After [hash lock transaction](../../built-in-features/aggregate-transaction.md#hashlocktransaction) has been confirmed, [announce the aggregate bonded transaction](../../built-in-features/aggregate-transaction.md).
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypeScript-->
 ```js
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -267,7 +267,7 @@ listener.open().then(() => {
 ```js
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -300,7 +300,7 @@ listener.open().then(() => {
 
     final LockFundsTransaction lockFundsTransaction = LockFundsTransaction.create(
         Deadline.create(2, HOURS),
-        XEM.createRelative(BigInteger.valueOf(10)),
+        NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
         BigInteger.valueOf(480),
         aggregateSignedTransaction,
         NetworkType.MIJIN_TEST

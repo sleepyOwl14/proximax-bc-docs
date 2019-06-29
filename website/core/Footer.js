@@ -105,7 +105,7 @@ class Footer extends React.Component {
             <h5>References</h5>
             <a href={this.docUrl('rest-api/rest-api-overview')}>REST API</a>
             <a href={this.docUrl('sdks/languages')}>SDKs</a>
-            <a href={this.docUrl('sdks/extending-nem-capabilities')}>Libraries</a>
+            <a href={this.docUrl('sdks/extending-ProximaX-capabilities')}>Libraries</a>
             <a href={this.docUrl('client/client-overview')}>CLI</a>
             <a
               className="github-button"

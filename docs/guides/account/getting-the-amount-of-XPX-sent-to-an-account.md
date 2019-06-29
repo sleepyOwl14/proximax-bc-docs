@@ -1,8 +1,8 @@
 ---
 id: getting-xem-amount-sent-to-account
-title: Getting the amount of XEM sent to an account
+title: Getting the amount of XPX sent to an account
 ---
-Check the amount of XEM you have sent to any account.
+Check the amount of XPX you have sent to any account.
 
 ## Prerequisites
 
@@ -31,8 +31,8 @@ accountHttp
         filter((_) => _.type === TransactionType.TRANSFER), // Filter transfer transactions
         map((_) => _ as TransferTransaction), // Map transaction as transfer transaction
         filter((_) => _.recipient.equals(address)), // Filter transactions from to account
-        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(XEM.MOSAIC_ID)), // Filter xem transactions
-        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, XEM.DIVISIBILITY)), // Map only amount in xem
+        filter((_) => _.mosaics.length === 1 && _.mosaics[0].id.equals(NetworkCurrencyMosaic.MOSAIC_ID)), // Filter xem transactions
+        map((_) => _.mosaics[0].amount.compact() / Math.pow(10, NetworkCurrencyMosaic.DIVISIBILITY)), // Map only amount in xem
         toArray(), // Add all mosaics amounts into one array
         map((_) => _.reduce((a, b) => a + b, 0))
     )
@@ -63,8 +63,8 @@ accountHttp
                 .filter(tx -> tx.getType().equals(TransactionType.TRANSFER)) // Filter transfer transactions
                 .map(tx -> (TransferTransaction) tx) // Map transaction as transfer transaction
                 .filter(tx -> tx.getRecipient().equals(address)) // Filter transactions from to account
-                .filter(tx -> tx.getMosaics().size() == 1 && tx.getMosaics().get(0).getId().equals(XEM.MOSAICID)) // Filter xem transactions
-                .map(tx -> tx.getMosaics().get(0).getAmount().divide(BigDecimal.valueOf(Math.pow(10, XEM.DIVISIBILITY)).toBigInteger())) // Map only amount in xem
+                .filter(tx -> tx.getMosaics().size() == 1 && tx.getMosaics().get(0).getId().equals(NetworkCurrencyMosaic.MOSAICID)) // Filter xem transactions
+                .map(tx -> tx.getMosaics().get(0).getAmount().divide(BigDecimal.valueOf(Math.pow(10, NetworkCurrencyMosaic.DIVISIBILITY)).toBigInteger())) // Map only amount in xem
                 .toList() // Add all mosaics amounts into one array
                 .map(amounts -> amounts.stream().reduce(BigInteger.ZERO, BigInteger::add))
                 .toFuture()
@@ -75,7 +75,7 @@ accountHttp
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-The amount of XEM sent is displayed in your terminal.
+The amount of XPX sent is displayed in your terminal.
 What’s next?
 
 Repeat the example by changing NEM filter for another [mosaic](../../built-in-features/mosaic.md).

@@ -112,4 +112,4 @@ nem2-cli account info --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54
 
 ## What’s next?
 
-Retrieve the balance by only [filtering the nem:xem](https://www.learnrxjs.io/operators/filtering/filter.html) amount.
+Retrieve the balance by only [filtering the prx:xpx](https://www.learnrxjs.io/operators/filtering/filter.html) amount.

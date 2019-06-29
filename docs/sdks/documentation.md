@@ -29,13 +29,13 @@ Each guide comes with at least one snippet. Snippets are executable pieces of co
 
 Writing snippets helps you to compare how the SDK code looks like in contrast with others. Furthermore, you will be testing manually if the SDK behaves correctly.
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/#fork-an-example-repository) and clone [nem2-docs repository](https://github.com/nemtech/nem2-docs).
+1. [Fork](https://help.github.com/articles/fork-a-repo/#fork-an-example-repository) and clone [proximax-bc-docs repository](https://github.com/proximax-storage/proximax-bc-docs).
 
 ```
-$> git clone https://github.com/<YOUR_USERNAME>/nem2-docs.git
+$> git clone https://github.com/<YOUR_USERNAME>/proximax-bc-docs.git
 ```
 
 2. Create a new folder under `source/resources/examples/` called .
-3. Code each example. Take [typescript snippets](https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples/typescript) as a reference.
+3. Code each example. Take [typescript snippets](https://github.com/proximax-storage/proximax-bc-docs/tree/master/source/resources/examples/typescript) as a reference.
 4. Push the changes, and [create a pull request](https://services.github.com/on-demand/intro-to-github/es/crear-pull-request).
 

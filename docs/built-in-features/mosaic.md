@@ -2,7 +2,7 @@
 id: mosaic
 title: Mosaic
 ---
-Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the NEM blockchain that can represent a set of multiple identical things that do not change.
+Mosaics are part of what makes the Smart Asset System unique and flexible. They are **fixed assets** on the ProximaX blockchain that can represent a set of multiple identical things that do not change.
 
 A mosaic could be a token, but it could also be a collection of more specialized assets such as reward points, shares of stock, signatures, status flags, votes or even other currencies.
 
@@ -40,7 +40,7 @@ Transferability |	Boolean |	If set to true, the mosaic can be transferred betwee
 
 **Note**
 
-Configuration parameters are [editable](https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties) . Public network configuration may differ.
+Configuration parameters are [editable](https://github.com/proximax-storage/catapult-server/blob/master/resources/config-network.properties) . Public network configuration may differ.
 
 </div>
 

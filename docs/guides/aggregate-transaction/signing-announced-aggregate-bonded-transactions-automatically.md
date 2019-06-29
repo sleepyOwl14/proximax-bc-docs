@@ -10,7 +10,7 @@ Sign automatically transactions pending to be cosigned.
 - Received some aggregate bonded transaction
 - NEM2-SDK
 - A text editor or IDE
-- An account with XEM
+- An account with XPX
 
 ## Let’s get into some code
 
@@ -132,7 +132,7 @@ Extend the previous function for signing transactions if they follow some constr
 - Aggregate transactions with two inner transactions.
 - Two inner transactions must be transfer transactions.
 - The transaction sending funds must have yourself as the signer.
-- The transaction sending funds should have only one mosaic, being this less than 100 XEM.
+- The transaction sending funds should have only one mosaic, being this less than 100 XPX.
 
 Try it yourself! Here you have a possible implementation:
 
@@ -143,8 +143,8 @@ const validTransaction = (transaction: Transaction, publicAccount: PublicAccount
     return transaction instanceof TransferTransaction &&
         transaction.signer!.equals(publicAccount) &&
         transaction.mosaics.length == 1 &&
-        transaction.mosaics[0].id.equals(XEM.MOSAIC_ID) &&
-        transaction.mosaics[0].amount.compact() < XEM.createRelative(100).amount.compact();
+        transaction.mosaics[0].id.equals(NetworkCurrencyMosaic.MOSAIC_ID) &&
+        transaction.mosaics[0].amount.compact() < NetworkCurrencyMosaic.createRelative(100).amount.compact();
 };
 
 const cosignAggregateBondedTransaction = (transaction: AggregateTransaction, account: Account): CosignatureSignedTransaction => {
@@ -208,7 +208,7 @@ listener.open().then(() => {
         return transaction.getType() == TransactionType.TRANSFER &&
                 transaction.getSigner().get().equals(publicAccount) &&
                 ((TransferTransaction)transaction).getMosaics().size() == 1 &&
-                ((TransferTransaction)transaction).getMosaics().get(0).getId().equals(XEM.MOSAICID) &&
+                ((TransferTransaction)transaction).getMosaics().get(0).getId().equals(NetworkCurrencyMosaic.MOSAICID) &&
                 ((TransferTransaction) transaction).getMosaics().get(0).getAmount().compareTo(BigInteger.valueOf(100)) > 0;
     }
 ```

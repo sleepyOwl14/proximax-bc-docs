@@ -8,7 +8,7 @@ Ask an account to send you funds using an [aggregate bonded transaction](../../b
 
 - Finish [creating an escrow with aggregate bonded transaction guide](./creating-an-escrow-with-aggregate-bonded-transaction.md)
 - A text editor or IDE
-- An account with XEM
+- An account with XPX
 
 ## Let’s get into some code
 
@@ -16,7 +16,7 @@ Ask an account to send you funds using an [aggregate bonded transaction](../../b
 
 <p class=caption>Asking for mosaics with an aggregate bonded transaction</p>
 
-Alice wants to ask Bob for 20 XEM.
+Alice wants to ask Bob for 20 XPX.
 
 1. Set up both Alice’s and Bob’s accounts.
 
@@ -92,7 +92,7 @@ const transferTransaction1 = TransferTransaction.create(
     Deadline.create(),
     bobAccount.address,
     [],
-    PlainMessage.create('send me 20 XEM'),
+    PlainMessage.create('send me 20 XPX'),
     NetworkType.MIJIN_TEST);
 ```
 
@@ -102,7 +102,7 @@ const transferTransaction1 = TransferTransaction.create(
     Deadline.create(),
     bobAccount.address,
     [],
-    PlainMessage.create('send me 20 XEM'),
+    PlainMessage.create('send me 20 XPX'),
     NetworkType.MIJIN_TEST);
 ```
 
@@ -112,7 +112,7 @@ const transferTransaction1 = TransferTransaction.create(
         Deadline.create(2, HOURS),
         bobPublicAccount.getAddress(),
         Collections.emptyList(),
-        PlainMessage.create("send me 20 XEM"),
+        PlainMessage.create("send me 20 XPX"),
         NetworkType.MIJIN_TEST
     );
 ```
@@ -127,7 +127,7 @@ const transferTransaction1 = TransferTransaction.create(
 
 - message: empty
 - receiver: Alice address
-- mosaics: 20 XEM
+- mosaics: 20 XPX
 - signer: Bob
 
 <!--DOCUSAURUS_CODE_TABS-->
@@ -137,7 +137,7 @@ const transferTransaction1 = TransferTransaction.create(
 const transferTransaction2 = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [XEM.createRelative(20)],
+    [NetworkCurrencyMosaic.createRelative(20)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
 ```
@@ -147,7 +147,7 @@ const transferTransaction2 = TransferTransaction.create(
 const transferTransaction2 = TransferTransaction.create(
     Deadline.create(),
     aliceAccount.address,
-    [XEM.createRelative(20)],
+    [NetworkCurrencyMosaic.createRelative(20)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
 ```
@@ -157,7 +157,7 @@ const transferTransaction2 = TransferTransaction.create(
     final TransferTransaction transferTransaction2 = TransferTransaction.create(
         Deadline.create(2, HOURS),
         aliceAccount.getAddress(),
-        Collections.singletonList(XEM.createRelative(BigInteger.valueOf(20))),
+        Collections.singletonList(NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(20))),
         PlainMessage.Empty,
         NetworkType.MIJIN_TEST
     );
@@ -195,7 +195,7 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
     final TransferTransaction transferTransaction2 = TransferTransaction.create(
         Deadline.create(2, HOURS),
         aliceAccount.getAddress(),
-        Collections.singletonList(XEM.createRelative(BigInteger.valueOf(20))),
+        Collections.singletonList(NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(20))),
         PlainMessage.Empty,
         NetworkType.MIJIN_TEST
     );
@@ -203,14 +203,14 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-4. Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 XEM.
+4. Alice signs the aggregate bonded transaction and announces it to the network, locking first 10 XPX.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypeScript-->
 ```js
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -239,7 +239,7 @@ listener.open().then(() => {
 ```js
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -271,7 +271,7 @@ listener.open().then(() => {
     // Creating the lock funds transaction and announce it
     final LockFundsTransaction lockFundsTransaction = LockFundsTransaction.create(
         Deadline.create(2, HOURS),
-        XEM.createRelative(BigInteger.valueOf(10)),
+        NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
         BigInteger.valueOf(480),
         pullTransactionSigned,
         NetworkType.MIJIN_TEST

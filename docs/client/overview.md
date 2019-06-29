@@ -3,7 +3,7 @@ id: client-overview
 title: Client Overview
 sidebar_label: Overview
 ---
-The NEM2 Command Line Interface is a unified tool to interact with the NEM blockchain.
+The NEM2 Command Line Interface is a unified tool to interact with the ProximaX blockchain.
 
 This tool will enable you to perform the most common used actions to interact with the blockchain.
 

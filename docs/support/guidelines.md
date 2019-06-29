@@ -2,9 +2,9 @@
 id: guidelines
 title: Guidelines
 ---
-First off, thank you for considering contributing to NEM!
+First off, thank you for considering contributing to ProximaX!
 
-Follow these guidelines for contributing to NEM projects, achieving the best quality with the less effort.
+Follow these guidelines for contributing to ProximaX projects, achieving the best quality with the less effort.
 
 <div class=info>
 

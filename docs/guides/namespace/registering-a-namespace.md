@@ -17,7 +17,7 @@ If an [account](../../built-in-features/account.md) creates a namespace, that na
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - NEM2-SDK or CLI
 - A text editor or IDE
-- An account with XEM
+- An account with XPX
 
 ## Let’s get into some code
 

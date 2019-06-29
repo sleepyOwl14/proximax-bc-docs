@@ -8,11 +8,11 @@ Create a new [account](../../built-in-features/account.md) and open it.
 
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - Text editor or IDE
-- NEM2-SDK or CLI
+- XPX-SDK or xpx2-CLI
 
 ## Let’s get into some code
 
-An account is a key pair (private and public key) associated to a mutable state stored in the NEM blockchain.
+An account is a key pair (private and public key) associated to a mutable state stored in the ProximaX blockchain.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypesSript-->
@@ -32,12 +32,12 @@ console.log('Your new account address is:', account.address.pretty(), 'and its p
 
 <!--bash-->
 ```sh
-nem2-cli account generate --network MIJIN_TEST
+xpx2-cli account generate --network MIJIN_TEST
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-The **private key** uniquely identifies a NEM account and holds all of its power. It is a priority to make sure it is stored safely somewhere **offline** and not to share it with anyone.
+The **private key** uniquely identifies a ProximaX Sirius Chain account and holds all of its power. It is a priority to make sure it is stored safely somewhere **offline** and not to share it with anyone.
 
 The **public key** is cryptographically derived from the private key and safe to be shared. In spite of that, it is preferable to share the **address**, which contains further information such as network and validity check.
 
@@ -107,7 +107,7 @@ console.log('Your new account address is:', account.address.pretty(), 'and its p
 
 <!--bash-->
 ```sh
-nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile test
+xpx2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000 --profile test
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -146,7 +146,7 @@ console.log('Your account address is:', account.address.pretty(), 'and its priva
 
 <!--bash-->
 ```sh
-nem2-cli profile create --privatekey your_private_key --network MIJIN_TEST --url http://localhost:3000 --profile test
+xpx2-cli profile create --privatekey your_private_key --network MIJIN_TEST --url http://localhost:3000 --profile test
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

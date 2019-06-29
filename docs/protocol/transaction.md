@@ -41,7 +41,7 @@ There are different types of transactions. For example, you can transfer [mosaic
 
 Every transaction shares some common properties. Each transaction extends from the [transaction schema definition](./transaction.md#transaction), adding the type’s particular properties.
 
-Transactions are defined in a [serialized form](../rest-api/serialization.md). We recommend to [use the NEM2-SDK to define](https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30) transactions.
+Transactions are defined in a [serialized form](../rest-api/serialization.md). We recommend to [use the NEM2-SDK to define](https://github.com/proximax-storage/proximax-bc-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L30) transactions.
 
 ## Fees
 
@@ -61,17 +61,17 @@ The harvesting nodes can decide their transaction inclusion strategy:
 - **Minimize-fees**: Philanthropic nodes. Include first transactions that other nodes do not want to include.
 - **Maximize-fees**: Most common in public networks. Include first transactions with higher fees.
 
-By default, the fee is paid in `XEM`, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another [mosaic](../built-in-features/mosaic.md) that better suits their needs.
+By default, the fee is paid in `XPX`, the underlying currency of the NEM network. Private chains can edit the configuration of the network to eliminate fees, or use another [mosaic](../built-in-features/mosaic.md) that better suits their needs.
 
 ## Signing a transaction
 
-Accounts must sign transactions before announcing them to the network. [Signing a transaction](https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40) expresses the account’s agreement to change the network state as defined.
+Accounts must sign transactions before announcing them to the network. [Signing a transaction](https://github.com/proximax-storage/proximax-bc-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L40) expresses the account’s agreement to change the network state as defined.
 
 For example, a transfer transaction describes who is the recipient and the quantity of mosaics to transfer. In this case, signing the transaction means to accept moving those mosaics from one account’s balance to another.
 
-The account generates the signature [signing the first 100 bytes of the defined transaction](https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64) with its private key. Then, the signature is appended to the transaction’s body, resulting in a signed transaction.
+The account generates the signature [signing the first 100 bytes of the defined transaction](https://github.com/proximax-storage/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L64) with its private key. Then, the signature is appended to the transaction’s body, resulting in a signed transaction.
 
-The hash of the transaction is generated once [the sha3-256 algorithm](https://github.com/nemtech/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76) is applied to the serialized transaction.
+The hash of the transaction is generated once [the sha3-256 algorithm](https://github.com/proximax-storage/nem2-library-js/blob/f171afb516a282f698081aea407339cfcd21cd63/src/transactions/VerifiableTransaction.js#L76) is applied to the serialized transaction.
 
 ## Announcing a transaction
 
@@ -80,7 +80,7 @@ Signed transactions are ready to be announced to the network.
 ![Transaction Cycle](/img/transaction-cycle.png "Transaction Cycle")
 <p class="caption">Transaction cycle</p>
 
-After [announcing a transaction](https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47), the REST API will always return an OK response immediately. At this point, it is still unknown whether the transaction is valid.
+After [announcing a transaction](https://github.com/proximax-storage/proximax-bc-docs/blob/master/source/resources/examples/typescript/transaction/SendingATransferTransaction.ts#L47), the REST API will always return an OK response immediately. At this point, it is still unknown whether the transaction is valid.
 
 The first stage of validation happens in the API nodes. If the transaction presents some error, the WebSocket throws a notification through the status channel. In the positive case, the transaction reaches the P2P network with an **unconfirmed** status. Never rely on a transaction which has an unconfirmed state. It is not clear if it will get included in a block, as it should pass a second validation.
 

@@ -21,9 +21,9 @@ In this example, imagine the two parties agree on a virtual service, implying th
 4. Buyer approves goods or service
 5. Escrow releases payment to the seller
 
-**How is it applied to NEM?**
+**How is it applied to Proximax Sirius Chain?**
 
-Normalizing the language into NEM related concepts:
+Normalizing the language into Sirius Chain related concepts:
 
 **contractual arrangement**
 
@@ -53,7 +53,7 @@ The transaction gets included in a block
 
 - Finish [creating a mosaic guide](../mosaic/creating-a-mosaic.md)
 - Finish [sending payouts with aggregate complete transactions](./sending-payouts-with-aggregate-complete-transaction.md)
-- NEM2-SDK
+- tsjs-xpx-chain-sdk
 - A text editor or IDE
 
 ## Let’s get into some code
@@ -68,20 +68,20 @@ In this example, Alice and a ticket distributor want to swap the following mosai
 
 **Owner** |	**Mosaic Name** |	**Amount**
 ----------|-----------------|--------------
-Alice |	nem:xem |	100
+Alice |	prx:xpx |	100
 Ticket distributor |	museum:ticket |	1
 
 Before continuing, practise by setting up the namespaces and mosaics required.
 
 ### Mosaics swap
 
-Alice will send a transaction to the ticket distributor exchanging 100 nem:xem with 1 museum:ticket.
+Alice will send a transaction to the ticket distributor exchanging 100 prx:xpx with 1 museum:ticket.
 
 1. Create two [transfer transaction](../../built-in-features/transfer-transaction.md):
 
 <div class=cap-alpha-ol>
 
-1. From Alice to the ticket distributor sending 100 nem:xem
+1. From Alice to the ticket distributor sending 100 prx:xpx
 2. From the ticket distributor to Alice sending 1 museum:ticket.
 
 </div>
@@ -108,8 +108,8 @@ const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey(ticketD
 const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
     ticketDistributorPublicAccount.address,
-    [XEM.createRelative(100)],
-    PlainMessage.create('send 100 nem:xem to distributor'),
+    [NetworkCurrencyMosaic.createRelative(100)],
+    PlainMessage.create('send 100 prx:xpx to distributor'),
     NetworkType.MIJIN_TEST);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
@@ -135,8 +135,8 @@ const ticketDistributorPublicAccount = PublicAccount.createFromPublicKey( ticket
 const aliceToTicketDistributorTx = TransferTransaction.create(
     Deadline.create(),
     ticketDistributorPublicAccount.address,
-    [XEM.createRelative(100)],
-    PlainMessage.create('send 100 nem:xem to distributor'),
+    [NetworkCurrencyMosaic.createRelative(100)],
+    PlainMessage.create('send 100 prx:xpx to distributor'),
     NetworkType.MIJIN_TEST);
 
 const ticketDistributorToAliceTx = TransferTransaction.create(
@@ -160,8 +160,8 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
         final TransferTransaction aliceToTicketDistributorTx = TransferTransaction.create(
                 Deadline.create(2, HOURS),
                 ticketDistributorPublicAccount.getAddress(),
-            Collections.singletonList(XEM.createRelative(BigInteger.valueOf(100))),
-                PlainMessage.create("send 100 nem:xem to distributor"),
+            Collections.singletonList(NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(100))),
+                PlainMessage.create("send 100 prx:xpx to distributor"),
                 NetworkType.MIJIN_TEST
         );
 
@@ -187,7 +187,7 @@ const ticketDistributorToAliceTx = TransferTransaction.create(
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-3. When an aggregate transaction is bonded, Alice will need to lock at least 10 XEM. Once the ticket distributor signs the aggregate transaction, the amount of locked XEM becomes available again on Alice’s account, and the exchange will get through.
+3. When an aggregate transaction is bonded, Alice will need to lock at least 10 XPX. Once the ticket distributor signs the aggregate transaction, the amount of locked XPX becomes available again on Alice’s account, and the exchange will get through.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypesSript-->
@@ -201,7 +201,7 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -236,7 +236,7 @@ const signedTransaction = aliceAccount.sign(aggregateTransaction);
 
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -266,7 +266,7 @@ listener.open().then(() => {
 
         final LockFundsTransaction lockFundsTransaction = LockFundsTransaction.create(
                 Deadline.create(2, HOURS),
-                XEM.createRelative(BigInteger.valueOf(10)),
+                NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
                 BigInteger.valueOf(480),
                 aggregateSignedTransaction,
                 NetworkType.MIJIN_TEST

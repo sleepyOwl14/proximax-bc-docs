@@ -12,7 +12,7 @@ Catapult software allows defining any [mosaic](../built-in-features/mosaic.md) f
 
 **Note**
 
-Configuration parameters are [editable](https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties). Public network configuration may differ.
+Configuration parameters are [editable](https://github.com/proximax-storage/catapult-server/blob/master/resources/config-network.properties). Public network configuration may differ.
 
 </div>
 

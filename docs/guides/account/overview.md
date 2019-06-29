@@ -25,9 +25,9 @@ Get the public key and balance of an [account](../../built-in-features/account.m
 
 ***
 
-## [Getting the amount of XEM sent to an account](./getting-the-amount-of-XEM-sent-to-an-account.md)
+## [Getting the amount of XPX sent to an account](./getting-the-amount-of-XPX-sent-to-an-account.md)
 
-Check the amount of XEM you have sent to any account.
+Check the amount of XPX you have sent to any account.
 
 ***
 

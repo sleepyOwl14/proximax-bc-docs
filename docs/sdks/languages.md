@@ -7,21 +7,15 @@ title: Languages
 
 **Language** |	**Repository** |	**Reference** |	**Active Developers**
 -------------|-----------------|-------------------|----------------------------
-TypeScript & JS SDK |	[Repository](https://github.com/nemtech/nem2-sdk-typescript-javascript) |	[Documentation](https://nemtech.github.io/nem2-sdk-typescript-javascript/) |	NEM Foundation
-Java SDK |	[Repository](https://nemtech.github.io/nem2-sdk-java/) |	[Documentation](https://nemtech.github.io/nem2-sdk-java/) |	NEM Foundation
-
-If you want to collaborate in SDK creation, check the [SDK Development guidelines](./development.md). Then, add the repository under “Ongoing work”. You can click the “Edit on Github” button at the top-right part of the screen.
-
-## Community SDKs
-
-**Language** |	**Repository** |	**Reference** |	**Active Developers**
--------------|-----------------|------------------|-----------------------------
-C# SDK 	| [Repository](https://github.com/nemtech/nem2-sdk-csharp/) 	|  	[@kodty](https://github.com/kodty)
-Go SDK |	[Repository](https://github.com/proximax-storage/nem2-sdk-go/) 	 | 	[@proximax-storage](https://github.com/proximax-storage)
-Swift SDK |	[Repository](https://github.com/proximax-storage/nem2-sdk-swift/) 	|  	[@proximax-storage](https://github.com/proximax-storage)
-C++ 	  | ||	  	 
-PHP SDK 	|||  	  	 
-Ruby SDK 	||| 
+TypeScript & JS SDK |	[Repository](https://github.com/proximax-storage/tsjs-xpx-chain-sdk ) |	[Documentation](https://proximax-storage.github.io/tsjs-xpx-chain-sdk) |	[@proximax-storage](https://github.com/proximax-storage)
+Java SDK |	[Repository](https://proximax-storage.github.io/java-xpx-chain-sdk/) |	[Documentation](https://proximax-storage.github.io/java-xpx-chain-sdk/) |	[@proximax-storage](https://github.com/proximax-storage)
+C# SDK 	| [Repository](https://github.com/proximax-storage/csharp-xpx-chain-sdk/ ) 	| [Documentation](#) | 	[@proximax-storage](https://github.com/proximax-storage)
+Go SDK |	[Repository](https://github.com/proximax-storage/go-xpx-chain-sdk/) 	| [Documentation](#) | 	[@proximax-storage](https://github.com/proximax-storage)
+Swift SDK |	[Repository](https://github.com/proximax-storage/swift-xpx-chain-sdk/) 	| [Documentation](#) | 	[@proximax-storage](https://github.com/proximax-storage)
+Dart SDK | [Repository](https://github.com/proximax-storage/dart-xpx-chain-sdk/) | [Documentation](#) | [@proximax-storage](https://github.com/proximax-storage)
+C++ 	  | [Repository](https://github.com/proximax-storage/cpp-xpx-chain-sdk/) | [Documentation](#) | [@proximax-storage](https://github.com/proximax-storage)	  	 
+PHP SDK 	| [Repository](https://github.com/proximax-storage/php-xpx-chain-sdk/) | [Documentation](#) | [@proximax-storage](https://github.com/proximax-storage) 	  	 
+Rust SDK 	| [Repository](https://github.com/proximax-storage/rust-xpx-chain-sdk/) | [Documentation](#) | [@proximax-storage](https://github.com/proximax-storage)
 
 ## Ongoing work
 
@@ -29,4 +23,3 @@ The following repositories have not been tested by the community, they are under
 
 **Language** |	**Repository** |	**Reference** |	**Active Developers**
 -------------|-----------------|------------------|-----------------------------
-Python SDK |	[Repository](https://github.com/nemtech/nem2-sdk-python/) |	 | 	NEM Foundation

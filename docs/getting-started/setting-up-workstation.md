@@ -2,14 +2,14 @@
 id: setting-up-workstation
 title: Setting up your workstation
 ---
-This first guide will walk you through a step-by-step installation of the required tools to start developing on NEM.
+This first guide will walk you through a step-by-step installation of the required tools to start developing on Sirius Chain.
 
-## Running Catapult Service Bootstrap
-![Catapult Layer](/img/four-layer-architecture-basic.png "Catapult Layer")
+## Running Sirius Chain Service Bootstrap
+![Sirius Chain Layer](/img/four-layer-architecture-basic.png "Sirius Chain Layer")
 
-**Catapult Server nodes** (layer 1) build the peer-to-peer blockchain network. **Catapult Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
+**Sirius Chain Server nodes** (layer 1) build the peer-to-peer blockchain network. **Sirius Chain Rest nodes** (layer 2) provide the API gateway that the applications may use to access the blockchain and its features.
 
-You are going to run a private chain for learning purposes using [Catapult Service Bootstrap](https://github.com/tech-bureau/catapult-service-bootstrap). This service runs Catapult server instances and Catapult REST nodes locally.
+You are going to run a private chain for learning purposes using [Sirius Chain Service Bootstrap](https://github.com/tech-bureau/sirius-Chain-service-bootstrap). This service runs Sirius Chain server instances and Sirius Chain REST nodes locally.
 
 1. Make sure you have [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed before running the following commands:
 
@@ -22,7 +22,7 @@ $> docker-compose up
 <div class="info">
 
 **NOTE** <br>
-Is catapult service bootstrap not working? Check [these troubleshooting tips](https://github.com/tech-bureau/catapult-service-bootstrap#known-issues).
+Is catapult service bootstrap not working? Check [these troubleshooting tips](https://github.com/tech-bureau/sirius-Chain-service-bootstrap#known-issues).
 </div>
 
 ######
@@ -33,50 +33,50 @@ $> curl localhost:3000/block/1
 ```
 
 ## Creating a test account
-An account is a key pair (private and public key) associated to a mutable state stored in the ProximaX blockchain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
+An account is a key pair (private and public key) associated to a mutable state stored in the ProximaX Sirius Chain. In other words, you have a deposit box on the blockchain, which only you can modify with your key pair. As the name suggests, the private key has to be kept secret at all times. Anyone with access to the private key, ultimately has control over the account.
 
 The **public key** is cryptographically derived from the private key. It would take millions of years to do the reverse process and therefore, the public key is safe to be shared.
 
 Finally, the account address is generated with the public key, following the ProximaX blockchain protocol. Share this address instead of the public key, as it contains more information, such as a validity check or which network it uses (public, testnet or private).
 
-[NEM2-CLI](../client/overview.md) conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
+[XPX2-CLI](../client/overview.md) conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
-1. Install NEM2-CLI using `npm`.
+1. Install XPX2-CLI using `npm`.
 
 ```
-$> sudo npm install --global nem2-cli
+$> sudo npm install --global xpx2-cli
 ```
 
 2. Create an account with the command line tool.
 
 ```
-$> nem2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000
+$> xpx2-cli account generate --network MIJIN_TEST --save --url http://localhost:3000
 ```
 
 The `network flag` is set to MIJIN_TEST. Test network is an alternative ProximaX blockchain used for development and testing purposes.
 
-Use `save flag` to store the account on your computer. NEM2-CLI uses stored account to sign the transactions that you start.
+Use `save flag` to store the account on your computer. XPX2-CLI uses stored account to sign the transactions that you start.
 
 3. You should be able to see the following lines in your terminal, containing the account credentials:
 
 > New Account: WCVG35-ZSPMYP-L2POZQ-JGSVEG-RYOJ3V-BNIU3U-N2E6 <br> Public Key: 33E0…6ED <br> Private Key: 0168…595
 
-## What is XEM and how to get it?
+## What is XPX and how to get it?
 
-The underlying cryptocurrency of the ProximaX network is called **XEM**. Every action on the ProximaX blockchain costs XEM, in order to provide an incentive for those who validate and secure the network.
+The underlying cryptocurrency of the ProximaX network is called **XPX**. Every action on the ProximaX blockchain costs XPX, in order to provide an incentive for those who validate and secure the network.
 
-Let’s use an account which already has XEM. We will need it to register the namespace and mosaic.
+Let’s use an account which already has XPX. We will need it to register the namespace and mosaic.
 
-1. Open a terminal, and go to the directory where you have download Catapult Bootstrap Service.
+1. Open a terminal, and go to the directory where you have download Sirius Chain Bootstrap Service.
 
 ```
 $> cd  build/generated-addresses/
 $> cat addresses.yaml
 ```
-2. Under the section `nemesis_addresses`, you will find the key pairs which contain XEM.
-3. Load the first account as a profile in NEM2-CLI.
+2. Under the section `nemesis_addresses`, you will find the key pairs which contain XPX.
+3. Load the first account as a profile in XPX2-CLI.
 ```
-$> nem2-cli profile create
+$> xpx2-cli profile create
 
 Introduce network type (MIJIN_TEST, MIJIN, MAIN_NET, TEST_NET): MIJIN_TEST
 Introduce your private key: 41************************************************************FF
@@ -95,13 +95,13 @@ Create a folder for your new project and run the instructions for the selected l
 ```
 $> npm init
 ```
-2. Install nem2-sdk and rxjs library.
+2. Install tsjs-xpx-chain-sdk and rxjs library.
 ```
-$> npm install nem2-sdk rxjs
+$> npm install tsjs-xpx-chain-sdk rxjs
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-3. nem2-sdk is build with TypeScript language. It is recommended to use TypeScript instead of JavaScript when building applications for ProximaX blockchain.
+3. tsjs-xpx-chain-sdk is build with TypeScript language. It is recommended to use TypeScript instead of JavaScript when building applications for ProximaX Sirius Chain.
 
 Make sure you have at least version 2.5.X installed.
 ```

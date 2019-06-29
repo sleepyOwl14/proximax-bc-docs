@@ -21,7 +21,7 @@ Select your [programming language](./overview.md) and [install the latest versio
 
 NEM2-SDK shares the same design/architecture between programming languages. That means fast language adaptation, cohesion and shared knowledge between NEM developers, most rapid SDK updates and fewer bugs.
 
-NEM-SDK does not add features that are not 100% related to [Catapult REST API](../rest-api/overview.md#requests). Instead, it permits to be extended by the use of new standalone [libraries](./extending-nem-capabilities.md).
+NEM-SDK does not add features that are not 100% related to [Catapult REST API](../rest-api/overview.md#requests). Instead, it permits to be extended by the use of new standalone [libraries](./extending-proximax-blockchain-capabilities.md).
 
 The new SDK implements the new features available in Catapult.
 
@@ -128,15 +128,10 @@ The new SDK implements the new features available in Catapult.
 
 - New Model.
 
-**XEM**
+**XPX**
 
 - Added two static constructors, createRelative and createAbsolute.
 
-## Breaking changes
-
-NEM Library inspires NEM2-SDK architecture. However, several architectural improvements have been made.
-
-If you were using NEM-Library for NIS 1, consider reviewing the following breaking changes when considering upgrading to NEM2-SDK.
 
 ## General
 

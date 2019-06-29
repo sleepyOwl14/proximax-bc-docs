@@ -15,7 +15,7 @@ A mosaic is like a file hosted on a domain and it represents an asset. Like a we
 - Finish [registering a namespace guide](../namespace/registering-a-namespace.md)
 - NEM2-SDK or CLI
 - A text editor or IDE
-- An account with XEM and at least one namespace
+- An account with XPX and at least one namespace
 
 ## Let’s get into some code
 

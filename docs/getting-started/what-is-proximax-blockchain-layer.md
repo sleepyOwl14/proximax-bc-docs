@@ -1,6 +1,6 @@
 ---
-id: what-is-proximax
-title: What is proximax
+id: what-is-proximax-blockchain-layer
+title: What is proximax Blockchain Layer
 ---
 ## Blockchain Reimagined and Evolved
 
@@ -21,7 +21,7 @@ ProximaX [nodes](../protocol/node.md) provide a powerful, stable and secure plat
 
 All the features are available through the API interface on each node in the network itself. This means that the blockchain can be used to create a variety of architecture solutions with lightweight [code in any language](../sdks/languages.md).
 
-![Architecting NEM Solutions](/img/architecting-nem-solutions.png "Architecting NEM Solutions")
+![Architecting Sirius Chain Solutions](/img/architecting-sirius-chain-solutions.png "Architecting Sirius Chain Solutions")
 
 **Mobile app direct access** 
 
@@ -39,4 +39,4 @@ A gateway server links existing business contract logic, systems, or databases t
 
 ![Public Private Blockchain](/img/public-private-blockchain.png "Public Private Blockchain")
 
-ProximaX provides both a decentralized, open and self-sustaining **public blockchain** that can be used by anyone – as well as a **permissioned/private blockchain solution** that can be provisioned specifically for your use on your servers when speed and privacy are the priority.
+ProximaX Sirius Chain provides both a decentralized, open and self-sustaining **public blockchain** that can be used by anyone – as well as a **permissioned/private blockchain solution** that can be provisioned specifically for your use on your servers when speed and privacy are the priority.

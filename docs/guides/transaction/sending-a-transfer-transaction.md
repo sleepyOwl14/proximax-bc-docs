@@ -10,7 +10,7 @@ Transfer [mosaics](../../built-in-features/mosaic.md) and messages between two a
 - Finish the [getting started section](../../getting-started/setting-up-workstation.md)
 - NEM2-SDK or CLI
 - A text editor or IDE
-- An account with XEM
+- An account with XPX
 
 ## Background
 
@@ -18,7 +18,7 @@ Transfer [mosaics](../../built-in-features/mosaic.md) and messages between two a
 
 <p class=caption>Sending a transfer Transaction</p>
 
-Alice wants to send 10 XEM to Bob, whose address is `SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54`.
+Alice wants to send 10 XPX to Bob, whose address is `SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54`.
 
 ### Monitoring the transaction
 
@@ -44,9 +44,9 @@ $> nem2-cli monitor confirmed
 
 ## Let’s get into some code
 
-Alice wants sends 10 XEM to Bob. She wants to include a message, for example Welcome to NEM.
+Alice wants sends 10 XPX to Bob. She wants to include a message, for example Welcome to NEM.
 
-1. Create the transfer transaction, by including Bob address as the recipient, adding 10 XEM and the message requested.
+1. Create the transfer transaction, by including Bob address as the recipient, adding 10 XPX and the message requested.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypeScript-->
@@ -56,7 +56,7 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
+    [NetworkCurrencyMosaic.createRelative(10)],
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);
 ```
@@ -68,7 +68,7 @@ const recipientAddress = Address.createFromRawAddress('SD5DT3-CH4BLA-BL5HIM-EKP2
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
     recipientAddress,
-    [XEM.createRelative(10)],
+    [NetworkCurrencyMosaic.createRelative(10)],
     PlainMessage.create('Welcome To NEM'),
     NetworkType.MIJIN_TEST);
 ```
@@ -80,7 +80,7 @@ const transferTransaction = TransferTransaction.create(
     final TransferTransaction transferTransaction = TransferTransaction.create(
         Deadline.create(2, HOURS),
         Address.createFromRawAddress(recipientAddress),
-        Collections.singletonList(XEM.createRelative(BigInteger.valueOf(10))),
+        Collections.singletonList(NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10))),
         PlainMessage.create("Welcome To NEM"),
         NetworkType.MIJIN_TEST
     );
@@ -153,7 +153,7 @@ transactionHttp
 
 <!--Bash-->
 ```bash
-nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics nem:xem::10000000 --message "Welcome to NEM"
+nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics prx:xpx::10000000 --message "Welcome to NEM"
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -183,26 +183,26 @@ If you own more than one mosaic, send them together in the same transaction:
 <!--TypeScript-->
 ```js
 [new Mosaic( new MosaicId('alice:token'), UInt64.fromUint(10)),
-        XEM.createRelative(10)],
+        NetworkCurrencyMosaic.createRelative(10)],
 ```
 
 <!--JavaScript-->
 ```js
 [new Mosaic( new MosaicId('alice:token'), UInt64.fromUint(10)),
-        XEM.createRelative(10)],
+        NetworkCurrencyMosaic.createRelative(10)],
 ```
 
 <!--Java-->
 ```java
     Arrays.asList(
         new Mosaic(new MosaicId("alice:token"), BigInteger.valueOf(10)),
-        XEM.createRelative(BigInteger.valueOf(10))
+        NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10))
     ),
 ```
 
 <!--Bash-->
 ```bash
-nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics alice:token::10,nem:xem::10000000 --message "sending multiple mosaics"
+nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics alice:token::10,prx:xpx::10000000 --message "sending multiple mosaics"
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

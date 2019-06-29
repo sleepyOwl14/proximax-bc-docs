@@ -2,15 +2,15 @@
 id: namespace
 title: Namespace
 ---
-Namespaces allow you to create an on-chain **unique place** for your business and your assets on the NEM blockchain.
+Namespaces allow you to create an on-chain **unique place** for your business and your assets on the ProximaX blockchain.
 
-A namespace starts with a name that you choose, similar to an internet domain name. If one [account](./account.md) creates a namespace, that will appear as unique in the NEM ecosystem.
+A namespace starts with a name that you choose, similar to an internet domain name. If one [account](./account.md) creates a namespace, that will appear as unique in the ProximaX ecosystem.
 
 You can associate a name with an account address or a [mosaic](./mosaic.md) identifier by announcing an [alias transaction](#addressaliastransaction). The binding between namespaces and assets makes long account addresses rememberable and mosaics identifiers recognizable.
 
 ## Subnamespaces
 
-On the internet, a domain can have a sub-domain. In NEM, namespaces can have subnamespaces.
+On the internet, a domain can have a sub-domain. In ProximaX, namespaces can have subnamespaces.
 
 It is possible to create multiple subnamespaces with the same name (example: `foo.bar` and `foo2.bar`, `bar` is the subnamespace/sub-domain).
 
@@ -45,7 +45,7 @@ Namespaces and subnamespaces are used to organize the different mosaics. Custome
 
 **Note**
 
-Configuration parameters are [editable](https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties) . Public network configuration may differ.
+Configuration parameters are [editable](https://github.com/proximax-storage/catapult-server/blob/master/resources/config-network.properties) . Public network configuration may differ.
 
 </div>
 

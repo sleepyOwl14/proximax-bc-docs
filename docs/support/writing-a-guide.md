@@ -6,7 +6,7 @@ Thank you for considering writing a new guide!
 
 ## Before starting
 
-1. Open the [nem2-docs repository issues](https://github.com/nemtech/nem2-docs/issues), and find some ideas pending to be written. They have the label “great new issue”.
+1. Open the [proximax-bc-docs repository issues](https://github.com/proximax-storage/proximax-bc-docs/issues), and find some ideas pending to be written. They have the label “great new issue”.
 2. Opt to contribute to one of them by adding a comment, or create a new issue with your guide idea.
 3. Check if you can classify your guide under one of the current categories. If not, create a new issue proposing a new category:
 
@@ -25,7 +25,7 @@ Node |	transfer-transaction, aggregate-transaction, cross-chain-transaction, mon
 
 ## Write a guide for this repository
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) and clone the [nem2-docs](https://github.com/nemtech/nem2-docs) repository.
+1. [Fork](https://help.github.com/articles/fork-a-repo/) and clone the [proximax-bc-docs](https://github.com/proximax-storage/proximax-bc-docs) repository.
 
 ```
 $> git clone <url>
@@ -90,7 +90,7 @@ $> mkdir source/guides/<folder_name>/<title>.rst
 
 6. Write and code your guide! Check the [restructured text cheatsheet](https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst) to style your text.
 
-7. Add the [code examples](https://github.com/nemtech/nem2-docs/tree/master/source/resources/examples) under `source/resources/examples/<language_or_tool>`. You can render fragments of code from a file inside your rst file.
+7. Add the [code examples](https://github.com/proximax-storage/proximax-bc-docs/tree/master/source/resources/examples) under `source/resources/examples/<language_or_tool>`. You can render fragments of code from a file inside your rst file.
 
     .. example-code::
 

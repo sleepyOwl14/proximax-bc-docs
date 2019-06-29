@@ -12,7 +12,7 @@ This guide will show you how to cosign aggregate bonded transactions that requir
 - Received some aggregate bonded transaction
 - NEM2-SDK
 - A text editor or IDE
-- An account with XEM
+- An account with XPX
 
 ## Let’s get into some code
 

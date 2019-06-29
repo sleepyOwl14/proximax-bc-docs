@@ -1,14 +1,14 @@
 ---
-id: extending-nem-capabilities
-title: Extending NEM Capabilities
+id: extending-sirius-chain-capabilities
+title: Extending Sirius Chain Capabilities
 ---
 Aside from creating a heavy and full-featured [SDK](./overview.md), we are developing a robust and lightweight one. Thanks to this SDK, different libraries can be developed for each standard, on top of NEM2-SDK, allowing higher and faster growth for NEM applications.
 
-Developers could opt to create a standalone library to add more features into NEM. However, to become an accepted library, it should be proposed as a [NEM Improvement Proposal](https://github.com/nemtech/NIP).
+Developers could opt to create a standalone library to add more features into NEM. However, to become an accepted library, it should be proposed as a [NEM Improvement Proposal](https://github.com/proximax-storage/NIP).
 
 ## Official libraries
 
-The reason behind the [NEM Improvement Proposal](https://github.com/nemtech/NIP) is to ensure that the new library is reviewed, tested and shared among NEM developers.
+The reason behind the [NEM Improvement Proposal](https://github.com/proximax-storage/NIP) is to ensure that the new library is reviewed, tested and shared among NEM developers.
 
 - Accepted specification
 - At least one implementation that successfully passes the code review.

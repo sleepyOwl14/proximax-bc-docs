@@ -185,7 +185,7 @@ nem2-cli monitor confirmed --address SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-I
 
 <!--Bash-->
 ```
-nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics nem:xem::10000000 --message "Welcome to NEM"
+nem2-cli transaction transfer --recipient SD5DT3-CH4BLA-BL5HIM-EKP2TA-PUKF4N-Y3L5HR-IR54 --mosaics prx:xpx::10000000 --message "Welcome to NEM"
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

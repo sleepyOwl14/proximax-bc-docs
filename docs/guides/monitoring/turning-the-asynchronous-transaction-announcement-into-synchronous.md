@@ -3,10 +3,10 @@ id: turning-the-asynchronous-transaction-announcement-into-synchronous
 title: Turning the asynchronous transaction announcement into synchronous
 sidebar_label: Turning asynchronous transaction announcement into synchronous
 ---
-Turn asynchronous transaction announcement into synchronous with [nem2-camel](https://github.com/nemtech/nem2-camel).
+Turn asynchronous transaction announcement into synchronous with [nem2-camel](https://github.com/proximax-storage/nem2-camel).
 Background
 
-Alice is developing an app to send 10 nem:xem to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
+Alice is developing an app to send 10 prx:xpx to Bob. She wants to know if the transaction has reached the network before sending Bob an email.
 
 When announcing a transaction in NIS1, you had to wait to get the response from the node. Catapult works differently. When a transaction is announced, the REST API server will always return an OK.
 
@@ -32,7 +32,7 @@ The function `TransactionHttp.announceSync` allows announcing transactions synch
 
 - Finish [sending a transfer transaction guide](../transaction/sending-a-transfer-transaction.md)
 - A text editor or IDE
-- An account with XEM
+- An account with XPX
 
 ## Let’s get into some code
 
@@ -58,9 +58,9 @@ $> curl localhost:3000/block/1
 
 ### Getting Alice and Bob addresses
 
-Once the Catapult Service is running, it will generate a set of accounts containing XEM.
+Once the Catapult Service is running, it will generate a set of accounts containing XPX.
 
-1. Find the key pairs which contain XEM under the section `nemesis_addresses`.
+1. Find the key pairs which contain XPX under the section `nemesis_addresses`.
 
 ```
     $> cd  build/generated-addresses/
@@ -81,7 +81,7 @@ nem2-camel requires at least Java version 8.
 
 </div>
 
-1. Download the latest [nem2-camel jar](https://github.com/nemtech/nem2-camel/releases) package release, and run:
+1. Download the latest [nem2-camel jar](https://github.com/proximax-storage/nem2-camel/releases) package release, and run:
 
 ```
 $> java -jar nem2-camel.jar --url http://localhost:3000
@@ -91,7 +91,7 @@ $> java -jar nem2-camel.jar --url http://localhost:3000
 
 ### Sending the transfer transaction
 
-1. Alice creates a [Transfer Transaction](../../built-in-features/transfer-transaction.md), sending 10 XEM to Bob and signs it with her account.
+1. Alice creates a [Transfer Transaction](../../built-in-features/transfer-transaction.md), sending 10 XPX to Bob and signs it with her account.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypeScript-->
@@ -104,7 +104,7 @@ const recipientAddress =  Address.createFromRawAddress('SBHEVGUFDEW22FAT2EFU6UYX
 const transferTransaction = TransferTransaction.create(
     Deadline.create(),
    recipientAddress,
-    [XEM.createRelative(10)],
+    [NetworkCurrencyMosaic.createRelative(10)],
     EmptyMessage,
     NetworkType.MIJIN_TEST);
 

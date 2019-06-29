@@ -1,10 +1,9 @@
 {
   "docs": {
     "Getting Started": [
-      "getting-started/what-is-proximax",
+      "getting-started/what-is-proximax-blockchain-layer",
       "getting-started/setting-up-workstation",
-      "getting-started/writing-first-application",
-      "getting-started/self-paced-training"
+      "getting-started/writing-first-application"
     ],
     "Protocol": [
       "protocol/cryptography",
@@ -35,24 +34,17 @@
       "sdks/sdks-overview",
       "sdks/architecture",
       "sdks/languages",
-      "sdks/extending-nem-capabilities",
+      "sdks/extending-proximax-blockchain-capabilities",
       "sdks/sdk-development",
-      "sdks/sdk-documentation",
-      "sdks/migration"
+      "sdks/sdk-documentation"
     ],
     "Client":[
       "client/client-overview",
       "client/commands"
     ],
-    "Prototyping Tool":[
-      "prototyping-tool/prototyping-overview",
-      "prototyping-tool/configuring-nodes",
-      "prototyping-tool/examples"
-    ],
     "Support":[
       "support/community",
       "support/guidelines",
-      "support/contributors",
       "support/suggesting-changes"
     ],
     "Wallets & Explorers": [
@@ -83,7 +75,7 @@
       ],
     "Cross Chain Swaps" : [
         "guides/cross-chain-swaps/cross-chain-swaps-overview",
-        "guides/cross-chain-swaps/atomic-cross-chain-swap-between-NEM-public-and-private-chain"
+        "guides/cross-chain-swaps/atomic-cross-chain-swap-between-ProximaX-public-and-private-chain"
       ],
     "Monitoring" : [
         "guides/monitoring/monitoring-overview",

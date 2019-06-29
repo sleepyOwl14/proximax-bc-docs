@@ -9,7 +9,7 @@ Did you register a [mosaic](../../built-in-features/mosaic.md) with supplyMutabl
 - Finish [creating a mosaic guide](./creating-a-mosaic.md)
 - NEM2-SDK or CLI
 - A text editor or IDE
-- An account with XEM
+- An account with XPX
 - Have registered a supply mutable mosaic
 
 ## Let’s get into some code

@@ -2,7 +2,7 @@
 id: serialization
 title: Serialization
 ---
-[Catbuffer library](https://github.com/nemtech/catbuffer) defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
+[Catbuffer library](https://github.com/proximax-storage/catbuffer) defines the protocol to serialize and deserialize Catapult entities. The library comes with code generators for different languages. SDKs and applications use the generated code to interact with REST transaction endpoint.
 
 ![Catbuffer](/img/catbuffer.png "Catbuffer")
 
@@ -16,7 +16,7 @@ Large networks compute a large number of transactions. Working with binary optim
 
 ## Flexibility
 
-REST [transaction endpoints](https://nemtech.github.io/api/endpoints.html#operation/announceTransaction) handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
+REST [transaction endpoints](https://proximax-storage.github.io/api/endpoints.html#operation/announceTransaction) handle the calls to update the blockchain state. The serialized payload of a transaction is appended to the body of the POST call. These endpoints allow the addition of new functionality to the server side without modifying the API contract.
 
 ## Reusability
 
@@ -32,15 +32,15 @@ The following entities are currently supported:
 
 **Schema file** |	**Description**
 ----------------|-------------------
-[entity.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/entity.cats) |	Describes an [entity](../protocol/transaction.md#transaction-types).
-[accountlink.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/accountlink.cats) |	Describes account link transaction.
-[hashlock.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/hashlock.cats) |	Describes a [hash lock transaction](../built-in-features/aggregate-transaction.md#hashlocktransaction).
-[secretlock.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/secretlock.cats) |	Describes a [secret lock transaction](../built-in-features/aggregate-transaction.md#secretlocktransaction).
-[lockhashtypes.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/lockhashtypes.cats) |	Describes the available [hash algorithms](../built-in-features/cross-chain-swaps.md#secretlocktransaction).
-[secretproof.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/secretproof.cats) |	Describes a [secret proof transaction](../built-in-features/cross-chain-swaps.md#secretprooftransaction).
-[transfer.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/transfer.cats) |	Describes a [transfer](../built-in-features/transfer-transaction.md#transfertransaction) transaction.
-[transaction.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/transaction.cats) | Describes a transaction.
-[types.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats) |	Describe field types used by other schemas.
+[entity.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/entity.cats) |	Describes an [entity](../protocol/transaction.md#transaction-types).
+[accountlink.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/accountlink.cats) |	Describes account link transaction.
+[hashlock.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/hashlock.cats) |	Describes a [hash lock transaction](../built-in-features/aggregate-transaction.md#hashlocktransaction).
+[secretlock.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/secretlock.cats) |	Describes a [secret lock transaction](../built-in-features/aggregate-transaction.md#secretlocktransaction).
+[lockhashtypes.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/lockhashtypes.cats) |	Describes the available [hash algorithms](../built-in-features/cross-chain-swaps.md#secretlocktransaction).
+[secretproof.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/secretproof.cats) |	Describes a [secret proof transaction](../built-in-features/cross-chain-swaps.md#secretprooftransaction).
+[transfer.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/transfer.cats) |	Describes a [transfer](../built-in-features/transfer-transaction.md#transfertransaction) transaction.
+[transaction.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/transaction.cats) | Describes a transaction.
+[types.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/types.cats) |	Describe field types used by other schemas.
 
 ## Parsing a schema and generating code
 
@@ -55,11 +55,11 @@ The generator creates a new file under `_generated/cpp` folder. Repeat the proce
 
 Are you writing a new catapult plugin that includes a new transaction type?
 
-In this example, we are examining how the [transfer.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/transfer.cats) schema works. Follow the same steps to define a new schema.
+In this example, we are examining how the [transfer.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/transfer.cats) schema works. Follow the same steps to define a new schema.
 
 First off, create a new file under `schemas` folder and define a struct for the transaction body. Think of a struct as a set of properties that we want to store in the same block of memory.
 
-The transaction body contains the extra properties which differ from a basic transaction. Each attribute can have one of the types defined in [types.cats](https://github.com/nemtech/catbuffer/blob/master/schemas/types.cats).
+The transaction body contains the extra properties which differ from a basic transaction. Each attribute can have one of the types defined in [types.cats](https://github.com/proximax-storage/catbuffer/blob/master/schemas/types.cats).
 
 ```c
 # binary layout for a transfer transaction

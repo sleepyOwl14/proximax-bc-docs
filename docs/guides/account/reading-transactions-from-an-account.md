@@ -75,13 +75,13 @@ System.out.print(transactions);
 
 **Note**
 
-Get filtered the transactions received (incoming) from the ones sent (outgoing) checking the complete [accountHttp definition](https://nemtech.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html).
+Get filtered the transactions received (incoming) from the ones sent (outgoing) checking the complete [accountHttp definition](https://proximax-storage.github.io/nem2-sdk-typescript-javascript/classes/_infrastructure_accounthttp_.accounthttp.html).
 
 </div>
 
 ## What’s next
 
-To [get more than 100 transactions](https://github.com/nemtech/nem2-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts), you will have to make further requests. For each additional call, add to the `QueryParams` the optional parameter `transactionId` with the latest transaction identifier known returned by the previous request.
+To [get more than 100 transactions](https://github.com/proximax-storage/proximax-bc-docs/blob/master/source/resources/examples/typescript/account/GettingAllConfirmedTransactions.ts), you will have to make further requests. For each additional call, add to the `QueryParams` the optional parameter `transactionId` with the latest transaction identifier known returned by the previous request.
 
 ```js
   new QueryParams(pageSize, transactions[transactions.length - 1].transactionInfo.id))

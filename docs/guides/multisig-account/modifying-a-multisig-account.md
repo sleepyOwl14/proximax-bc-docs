@@ -295,14 +295,14 @@ const signedTransaction = cosignatoryAccount.sign(aggregateTransaction);
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-4. Before sending an aggregate bonded transaction, Alice needs to lock at least `10` XEM. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After hash lock transaction has been confirmed, Alice announces the aggregate transaction.
+4. Before sending an aggregate bonded transaction, Alice needs to lock at least `10` XPX. This mechanism is required to prevent network spamming and ensure that transactions are cosigned. After hash lock transaction has been confirmed, Alice announces the aggregate transaction.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--TypeScript-->
 ```js
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -331,7 +331,7 @@ listener.open().then(() => {
 ```js
 const lockFundsTransaction = LockFundsTransaction.create(
     Deadline.create(),
-    XEM.createRelative(10),
+    NetworkCurrencyMosaic.createRelative(10),
     UInt64.fromUint(480),
     signedTransaction,
     NetworkType.MIJIN_TEST);
@@ -360,7 +360,7 @@ listener.open().then(() => {
 ```java
     final LockFundsTransaction lockFundsTransaction = LockFundsTransaction.create(
         Deadline.create(2, HOURS),
-        XEM.createRelative(BigInteger.valueOf(10)),
+        NetworkCurrencyMosaic.createRelative(BigInteger.valueOf(10)),
         BigInteger.valueOf(480),
         signedTransaction,
         NetworkType.MIJIN_TEST
@@ -391,7 +391,7 @@ The [listener implementation changes](../monitoring/monitoring-a-transaction-sta
 
 </div>
 
-Once Bob [cosigns the transaction](./signing-announced-aggregate-bonded-transactions.md), the amount of XEM locked becomes available again on Alice’s account and Carol is added to the multisig.
+Once Bob [cosigns the transaction](./signing-announced-aggregate-bonded-transactions.md), the amount of XPX locked becomes available again on Alice’s account and Carol is added to the multisig.
 
 ### Removing a cosignatory
 

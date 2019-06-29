@@ -11,13 +11,13 @@ Account filters feature is not implemented in the SDK yet.
 
 </div>
 
-[Accounts](./account.md) may configure a set of smart rules to block announcing or receiving transactions given a series of constraints.
+[Accounts][Account] may configure a set of smart rules to block announcing or receiving transactions given a series of constraints.
 
 The editable on-chain constraints are called filters. Accounts can configure the following types:
 
 ## Address filter
 
-An account can decide to receive transactions only from an allowed list of [addresses](./account.md). Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
+An account can decide to receive transactions only from an allowed list of [addresses][Account]. Similarly, an account can specify a list of addresses that don’t want to receive transactions from.
 
 ![Account Properties Address](/img/account-properties-address.png "Account Properties Address")
 
@@ -35,11 +35,11 @@ By default, when there is no filter set, all the accounts in the network can ann
 
 ## Mosaic filter
 
-An account can configure a filter to permit incoming transactions only if all the [mosaics](./mosaic.md) attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
+An account can configure a filter to permit incoming transactions only if all the [mosaics][Mosaic] attached are allowed. On the other hand, the account can refuse to accept transactions containing a mosaic listed as blocked.
 
 ## EntityType filter
 
-An account can allow/block announcing outgoing transactions with a [determined type](../protocol/transaction.md#transaction-types). By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
+An account can allow/block announcing outgoing transactions with a [determined type][Transaction-type]. By doing so, it increases its security, preventing the announcement by mistake of undesired transactions.
 
 ## Examples
 
@@ -47,7 +47,7 @@ An account can allow/block announcing outgoing transactions with a [determined t
 
 A company is using the public chain to certify the quality of their products.
 
-When the quality verification process concludes, an operator sends a [quality seal](./mosaic.md) to the product account.
+When the quality verification process concludes, an operator sends a [quality seal][Mosaic] to the product account.
 
 The final customers can review the product mosaics scanning a QR code. For that reason, the company only wants to show related transactions, avoiding others to spam their products with non-related information.
 
@@ -59,7 +59,7 @@ The company opts to configure their product accounts filters, enabling only to r
 
 ## Enhancing the account security
 
-Lately, Alice is only using her main account to cosign aggregate transactions where a [multisig](./multisig-account.md) she is a cosignatory is involved.
+Lately, Alice is only using her main account to cosign aggregate transactions where a [multisig][Multisig] she is a cosignatory is involved.
 
 As a temporary measure, Alice opts to disable announcing transfer transactions from her main account, double checking that any of the funds she owns will be transferred.
 
@@ -69,7 +69,7 @@ As a temporary measure, Alice opts to disable announcing transfer transactions f
 
 **Note**
 
-Configuration parameters are [editable](https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties) . Public network configuration may differ.
+Configuration parameters are [editable][Server-configurable] . Public network configuration may differ.
 
 </div>
 
@@ -83,7 +83,7 @@ Configure filters to prevent receiving transactions from undesired addresses.
 
 **Inlines**:
 
-- [Transaction](../protocol/transaction.md#transaction) or [EmbeddedTransaction](../protocol/transaction.md#embeddedtransaction)
+- [Transaction][Transaction] or [EmbeddedTransaction][EmbeddedTransaction]
 
 **Property** |	**Type** |	**Description**
 -------------|-----------|-------------------
@@ -101,7 +101,7 @@ Configure filters to prevent receiving transactions containing a specific mosaic
 
 **Inlines**:
 
-- [Transaction](../protocol/transaction.md#transaction) or [EmbeddedTransaction](../protocol/transaction.md#embeddedtransaction)
+- [Transaction][Transaction] or [EmbeddedTransaction][EmbeddedTransaction]
 
 **Property** |	**Type** |	**Description**
 -------------|-----------|-------------------
@@ -119,7 +119,7 @@ Configure filters to prevent announcing transactions by type.
 
 **Inlines**:
 
-- [Transaction](../protocol/transaction.md#transaction) or [EmbeddedTransaction](../protocol/transaction.md#embeddedtransaction)
+- [Transaction][Transaction] or [EmbeddedTransaction][EmbeddedTransaction]
 
 **Property** |	**Type** |	**Description**
 -------------|-----------|-------------------
@@ -155,7 +155,7 @@ value |	uint64 |	The mosaic id to allow/block.
 
 **Property** |	**Type** |	**Description**
 -------------|-----------|-------------------
-value |	uint16 	| The [entity type](../protocol/transaction.md#transaction-types) to allow/block.
+value |	uint16 	| The [entity type][Transaction-type] to allow/block.
 
 ### AccountPropertiesModification
 
@@ -182,3 +182,11 @@ Enumeration: uint8
 --------|------------------
 0x00 |	Add property value.
 0x01 |	Remove property value.
+
+[EmbeddedTransaction]: ../protocol/transaction.md#embeddedtransaction
+[Transaction]: ../protocol/transaction.md#transaction
+[Transaction-type]: ../protocol/transaction.md#transaction-types
+[Account]: ./account.md
+[Mosaic]: ./mosaic.md
+[Server-configurable]: https://github.com/proximax-storage/catapult-server/blob/master/resources/config-network.properties
+[Multisig]: ./multisig-account.md

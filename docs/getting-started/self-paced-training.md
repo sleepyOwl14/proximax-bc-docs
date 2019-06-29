@@ -11,12 +11,12 @@ If you prefer to learn about ProximaX through guided lessons, consider taking on
 **Title** | **Description** | **Target** | **Active contributors**
 ----------|-----------------|------------|------------------------
 [Getting started with ProximaX Catapult](https://craftain.com/courses/getting-started-with-nem-catapult/) | Build a decentralized blockchain app using Catapult. | Developers (ProximaX novice) | Craftain and ProximaX Foundation
-[Notarization of documents on ProximaX blockchain](https://nemtech.github.io/nem2-workshop-document-notarization/)  | Learn how digital assets can be notarized in the blockchain. | Developers (ProximaX advanced beginner) | ProximaX Foundation
-[ProximaX applied to supply chain](https://nemtech.github.io/nem2-workshop-nem-applied-to-supply-chain/) | Start developing a real use case step by step. | Developers (ProximaX competent) | ProximaX Foundation
+[Notarization of documents on ProximaX blockchain](https://proximax-storage.github.io/nem2-workshop-document-notarization/)  | Learn how digital assets can be notarized in the blockchain. | Developers (ProximaX advanced beginner) | ProximaX Foundation
+[ProximaX applied to supply chain](https://proximax-storage.github.io/nem2-workshop-nem-applied-to-supply-chain/) | Start developing a real use case step by step. | Developers (ProximaX competent) | ProximaX Foundation
 
 ## Adding a new course
 
-We suggest reviewing our [Curricular Framework](https://nemtech.github.io/nem2-curricular-framework/) and forking the [NEM2-workshop-template](https://github.com/nemtech/nem2-workshop-template).
+We suggest reviewing our [Curricular Framework](https://proximax-storage.github.io/nem2-curricular-framework/) and forking the [NEM2-workshop-template](https://github.com/proximax-storage/nem2-workshop-template).
 
 <div class="info">
 

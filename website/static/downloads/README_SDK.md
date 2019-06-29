@@ -39,10 +39,10 @@ Please, use the following available resources to get help:
 
 ## License
 
-Copyright (c) <YEAR> NEM
+Copyright (c) <YEAR> ProximaX
 Licensed under the <LICENSE_NAME>
 
-[self]: https://github.com/nemtech/nem2-sdk-<LANGUAGE_NAME>
-[docs]: http://nemtech.github.io/getting-started/setup-workstation.html
+[self]: https://github.com/proximax-storage/nem2-sdk-<LANGUAGE_NAME>
+[docs]: http://proximax-storage.github.io/getting-started/setup-workstation.html
 [issues]: https://github.com/<GITHUB_NICKNAME>/nem2-sdk-<LANGUAGE_NAME>/issues
-[sdk-ref]: http://nemtech.github.io/nem2-sdk-<LANGUAGE_NAME>
+[sdk-ref]: http://proximax-storage.github.io/nem2-sdk-<LANGUAGE_NAME>

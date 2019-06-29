@@ -56,7 +56,7 @@ The HTTP requests are made following the Repository Pattern, and they return NEM
 
 ## Models
 
-The NEM Domain models are, usually, immutable by definition. The developer cannot change its attributes. Instead, the developers have to create new Transactions and dispatch them to NEM Blockchain via TransactionHTTP, to change the NEM Blockchain state.
+The NEM Domain models are, usually, immutable by definition. The developer cannot change its attributes. Instead, the developers have to create new Transactions and dispatch them to ProximaX Blockchain via TransactionHTTP, to change the ProximaX Blockchain state.
 
 ## Services
 

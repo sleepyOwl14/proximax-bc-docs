@@ -2,7 +2,7 @@
 id: aggregate-transaction
 title: Aggregate Transaction
 ---
-Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. NEM does this by generating a one-time disposable smart contract. When all involved [accounts](./account.md) have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
+Aggregated Transactions merge multiple transactions into one, allowing **trustless swaps**, and other advanced logic. ProximaX does this by generating a one-time disposable smart contract. When all involved [accounts][Account] have cosigned the aggregate transaction, all the inner transactions are executed at the same time.
 
 ## Examples
 ## Sending payouts
@@ -25,9 +25,9 @@ In this example, Alice is buying tickets with currency:euro. When the ticket dis
 
 ## Paying for others fees
 
-Alice sends 10 € to Bob using an app to make payments. But she doesn’t have any XEM to pay the blockchain transaction fee.
+Alice sends 10 € to Bob using an app to make payments. But she doesn’t have any XPX to pay the blockchain transaction fee.
 
-By creating an aggregate bonded transaction, she can convert USD to XEM to pay the fee. Now Alice and Bob can use NEM blockchain without ever having to buy or hold XEM.
+By creating an aggregate bonded transaction, she can convert USD to XPX to pay the fee. Now Alice and Bob can use ProximaX blockchain without ever having to buy or hold XPX.
 
 Since the app creator can put their own branding on the open source payment app, Alice and Bob may not even know they are using blockchain.
 
@@ -51,7 +51,7 @@ An aggregate transaction is **bonded** when it requires signatures from other pa
 
 **Note**
 
-When sending an **aggregate bonded transaction**, an account must first announce and get confirmed a [hash lock transaction](hashlocktransaction) for this aggregate with at least `10` XEM.
+When sending an **aggregate bonded transaction**, an account must first announce and get confirmed a [hash lock transaction](#hashlocktransaction) for this aggregate with at least `10` XPX.
 
 </div>
 
@@ -70,31 +70,31 @@ Every time a cosignatory signs the transaction and [announces an aggregate bonde
 
 **Note**
 
-⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using [catapult-service-bootstrap 0.1.0](../getting-started/setting-up-workstation.md) to run the guides.
+⚠ The latest release introduces breaking changes. Until the SDKs are not aligned, we recommend using [catapult-service-bootstrap 0.1.0][Workstation] to run the guides.
 
 </div>
 
-- [Sending payouts with aggregate complete transaction](../guides/aggregate-transaction/sending-payouts-with-aggregate-complete-transaction.md)
+- [Sending payouts with aggregate complete transaction][Aggregate-complete]
 
     Send transactions to different accounts atomically, using an aggregate complete transaction.
 
-- [Creating an escrow with aggregate bonded transaction](../guides/aggregate-transaction/creating-an-escrow-with-aggregate-bonded-transaction.md)
+- [Creating an escrow with aggregate bonded transaction][Aggregate-escrow]
 
     Learn about aggregate bonded transactions, by creating an escrow.
 
-- [Asking for mosaics with aggregate bonded transaction](../guides/aggregate-transaction/asking-for-mosaics-with-aggregate-bonded-transaction.md)
+- [Asking for mosaics with aggregate bonded transaction][Aggregate-ask-mosaic]
 
     Ask an account to send you funds using an aggregate bonded transaction.
 
-- [Signing announced aggregate bonded transactions](../guides/aggregate-transaction/signing-announced-aggregate-bonded-transactions.md)
+- [Signing announced aggregate bonded transactions][Signing-aggregate]
 
     You have probably announced an aggregate bonded transaction, but all required cosigners have not signed it yet.
 
-- [Signing announced aggregate bonded transactions automatically](../guides/aggregate-transaction/signing-announced-aggregate-bonded-transactions-automatically.md)
+- [Signing announced aggregate bonded transactions automatically][Auto-sign-aggregate]
 
     Sign automatically transactions pending to be cosigned.
 
-- [Sending a multisig transaction](../guides/multisig-account/sending-a-multisig-transaction.md)
+- [Sending a multisig transaction][Send-multisig]
 
     Send a transaction involving a multisig and learn how an aggregate bonded transaction works.
 
@@ -104,7 +104,7 @@ Every time a cosignatory signs the transaction and [announces an aggregate bonde
 
 **Note**
 
-Configuration parameters are [editable](https://github.com/nemtech/catapult-server/blob/master/resources/config-network.properties) . Public network configuration may differ.
+Configuration parameters are [editable][Server-configurable] . Public network configuration may differ.
 
 </div>
 
@@ -116,7 +116,7 @@ Configuration parameters are [editable](https://github.com/nemtech/catapult-serv
 
 **Inlines**:
 
-- [Transaction](../protocol/transaction.md#transaction)
+- [Transaction][Transaction]
 
 **Property** |	**Type** |	**Description**
 -------------|-----------|--------------------
@@ -138,7 +138,7 @@ parentHash |	32 bytes (binary) |	The aggregate bonded transaction hash to cosign
 
 ### Cosignature
 
-- [Transaction](../protocol/transaction.md#transaction) or [EmbeddedTransaction](../protocol/transaction.md#embeddedtransaction)
+- [Transaction][Transaction] or [EmbeddedTransaction][EmbeddedTransaction]
 
 **Property** |	**Type** |	**Description**
 -------------|-----------|--------------------
@@ -161,10 +161,23 @@ If the aggregate bonded transaction duration is reached without being signed by 
 
 **Inlines**:
 
-- [Transaction](../protocol/transaction.md#transaction) or [EmbeddedTransaction](../protocol/transaction.md#embeddedtransaction)
+- [Transaction][Transaction] or [EmbeddedTransaction][EmbeddedTransaction]
 
 **Property** |	**Type** |	**Description**
 -------------|-----------|--------------------
-mosaic |	[Mosaic](./mosaic.md#mosaic) |	Locked mosaic, must be at least `10 nem:xem`.
+mosaic |	[Mosaic][Mosaic#mosaic] |	Locked mosaic, must be at least `10 prx:xpx`.
 duration |	uint64 |	The lock duration.
 hash |	32 bytes (binary) |	The aggregate bonded transaction hash that has to be confirmed before unlocking the mosaics.
+
+[Server-configurable]: https://github.com/proximax-storage/catapult-server/blob/master/resources/config-network.properties
+[Mosaic#mosaic]: ./mosaic.md#mosaic
+[Transaction]: ../protocol/transaction.md#transaction
+[EmbeddedTransaction]: ../protocol/transaction.md#embeddedtransaction
+[Account]: ./account.md
+[Workstation]: ../getting-started/setting-up-workstation.md
+[Aggregate-complete]: ../guides/aggregate-transaction/sending-payouts-with-aggregate-complete-transaction.md
+[Aggregate-escrow]: ../guides/aggregate-transaction/creating-an-escrow-with-aggregate-bonded-transaction.md
+[Aggregate-ask-mosaic]: ../guides/aggregate-transaction/asking-for-mosaics-with-aggregate-bonded-transaction.md
+[Signing-aggregate]: ../guides/aggregate-transaction/signing-announced-aggregate-bonded-transactions.md
+[Auto-sign-aggregate]: ../guides/aggregate-transaction/signing-announced-aggregate-bonded-transactions-automatically.md
+[Send-multisig]: ../guides/multisig-account/sending-a-multisig-transaction.md

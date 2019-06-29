@@ -12,7 +12,7 @@ hide_title : true
 
 </div>
 
-## [Atomic cross-chain swap between NEM public and private chain](./atomic-cross-chain-swap-between-NEM-public-and-private-chain.md)
+## [Atomic cross-chain swap between NEM public and private chain](./atomic-cross-chain-swap-between-ProximaX-public-and-private-chain.md)
 
 [Cross-chain swaps](../../built-in-features/cross-chain-swaps.md) enable trading tokens between different blockchains, without using an intermediary party in the process.
 

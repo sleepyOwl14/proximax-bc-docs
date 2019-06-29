@@ -12,7 +12,7 @@ The four-layered architecture allows developers to update any of these tiers wit
 
 ## P2P Component
 
-**Repository**: [Catapult Server](https://github.com/nemtech/catapult-server)
+**Repository**: [Catapult Server](https://github.com/proximax-storage/catapult-server)
 
 The P2P nodes form the backbone of the blockchain, making the network robust since it cannot be shut down by eliminating a single entity. The role of the node is to [verify transactions](./transaction.md#announcing-a-transaction) and [blocks](./block.md), run the consensus algorithm, create new blocks, and propagate the changes through the network.
 
@@ -49,7 +49,7 @@ Persisting the state is convenient in networks with a large number of accounts.
 
 ## API Component
 
-**Repository**: [Catapult REST](https://github.com/nemtech/catapult-rest)
+**Repository**: [Catapult REST](https://github.com/proximax-storage/catapult-rest)
 
 The primary responsibility of the API is to store the data in a readable form. Each API instance maintains a MongoDB, and optionally a RocksDB to save the state.
 
@@ -83,7 +83,7 @@ MongoDB should not be accessed externally.
 
 ## REST Component
 
-**Repository**: [Catapult REST](https://github.com/nemtech/catapult-rest)
+**Repository**: [Catapult REST](https://github.com/proximax-storage/catapult-rest)
 
 The REST component handles JSON API client requests. This reads from MongoDB, formats the response, and returns it to the client. This component is responsible as well to return events to the client using [WebSockets](../rest-api/websockets.md).
 
