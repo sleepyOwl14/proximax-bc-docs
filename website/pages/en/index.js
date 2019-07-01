@@ -24,8 +24,8 @@ class HomeSplash extends React.Component {
     return (
         <div className="home jumbotron text-center gap">
           <div className="inner">
-            <h1>Start Using Developer-Friendly Blockchain Platform</h1>
-            <h6>ProximaX Sirius gives you direct access to a specialized set of <b>tested</b> and <b>secure on-blockchain features</b> using your favourite <b>programming language</b>.
+            <h1>Start building apps on ProximaX Blockchain Platform</h1>
+            <h6>ProximaX Sirius gives you direct access to a specialised set of <b>tested</b> and <b>secure on-blockchain features</b> using your favourite <b>programming language</b>.
             </h6>
             <p>ProximaX Sirius Version 0.16 &mdash; NEW UPDATE! <span>06.19.2019</span></p>
           </div>

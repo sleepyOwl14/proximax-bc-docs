@@ -13,7 +13,7 @@
       "protocol/receipt",
       "protocol/node"
     ],
-    "Built-in Feautres": [
+    "Built-in Features": [
       "built-in-features/account",
       "built-in-features/account-filter",
       "built-in-features/multisig-account",
