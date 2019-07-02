@@ -326,7 +326,7 @@ The Sirius-Chain command line interface has a set of monitoring commands to trac
 
 ### Block
 
-Monitors new confirmed [blocks](../protocol/block.md) harvested in the blockchain.
+Monitors new confirmed [blocks](../protocol/block.md) validated in the blockchain.
 
 **Command**
 ```
